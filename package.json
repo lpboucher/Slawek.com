@@ -1,0 +1,10 @@
+{
+  "name": "slawek.com",
+  "version": "0.0.1",
+  "description": "A website for photographer Slawek",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lpboucher/Slawek.com.git"
+  },
+  "author": "VELO Design"
+}
