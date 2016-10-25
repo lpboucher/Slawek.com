@@ -24,7 +24,8 @@ footer, header, hgroup, menu, nav, section {
   display: block; }
 
 body {
-  line-height: 1; }
+  line-height: 1;
+  overflow-x: hidden; }
 
 ol, ul {
   list-style: none; }
@@ -50,17 +51,55 @@ body {
 .container, .gallery, .contact {
   width: 100%; }
   .container h1, .gallery h1, .contact h1 {
-    text-align: center; }
+    text-align: center;
+    font-size: 150%;
+    line-height: 140%;
+    padding: 1%; }
 
 .gallery, .contact {
-  background-color: grey;
-  overflow: auto; }
+  overflow: auto;
+  position: relative; }
+  .gallery h2, .contact h2 {
+    position: absolute;
+    top: 40%;
+    left: -10%;
+    z-index: -1;
+    color: #ce8686;
+    font-size: 1000%;
+    font-weight: bolder; }
+
+.backtext {
+  position: relative; }
 
 .column-left,
-.column-right {
-  display: inline-block;
-  width: 50%;
+.column-right,
+.column-left::before,
+.column-right::before {
+  width: 50%; }
+
+.column-right,
+.column-left {
   float: left; }
+
+.column-left::before,
+.column-right::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: -2;
+  background-color: #bababa; }
+
+.column-right,
+.column-right::before {
+  left: 50%; }
+
+ul {
+  position: absolute;
+  top: 10%;
+  left: 65%;
+  font-size: 200%;
+  line-height: 2.0; }
 
 .nocolumn {
   clear: both;
