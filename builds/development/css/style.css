@@ -10,7 +10,7 @@ table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+time, mark, audio, video, input {
   margin: 0;
   padding: 0;
   border: 0;
@@ -48,68 +48,179 @@ img {
 body {
   margin: 0; }
 
-.container, .gallery, .contact {
+body.modal-open {
+  overflow: hidden;
+  position: fixed; }
+
+#overlay {
+  /* Height & width depends on how you want to reveal the overlay (see JS below) */
+  height: 0;
+  width: 100%;
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  background-color: black;
+  /* Black fallback color */
+  background-color: rgba(0, 0, 0, 0.9);
+  /* Black w/opacity */
+  overflow-y: hidden;
+  /* Disable vertical scroll */
+  overflow-x: hidden;
+  /* Disable horizontal scroll */
+  transition: 0.5s;
+  /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */ }
+
+/* Position the content inside the overlay */
+/* When you mouse over the navigation links, change their color*/
+#overlay a:hover, #overlay a:focus {
+  color: #f1f1f1; }
+
+/* Position the close button (top right corner) */
+#overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+  color: #818181;
+  text-decoration: none;
+  transition: 0.3s; }
+
+.overlay-content {
+  /*font-family: 'Open Sans Condensed', arial, sans;*/
+  width: 500px;
+  padding: 30px;
+  background: #FFFFFF;
+  margin: 10% auto;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+  -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+  -webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22); }
+
+.overlay-content h2 {
+  background: #353535;
+  text-transform: uppercase;
+  text-align: center;
+  /*font-family: 'Open Sans Condensed', sans-serif;*/
+  color: #f1f1f1;
+  font-size: 18px;
+  font-weight: 100;
+  padding: 20px;
+  margin: -30px -30px 30px -30px; }
+
+.overlay-content input[type="text"],
+.overlay-content input[type="email"],
+.overlay-content textarea,
+.overlay-content select {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  outline: none;
+  display: block;
+  width: 100%;
+  padding: 7px;
+  border: none;
+  border-bottom: 1px solid #ddd;
+  background: transparent;
+  margin-bottom: 10px;
+  font: 16px Arial, Helvetica, sans-serif;
+  height: 45px; }
+
+.overlay-content textarea {
+  resize: none;
+  overflow: hidden; }
+
+.overlay-content input[type="button"],
+.overlay-content input[type="submit"] {
+  -moz-box-shadow: inset 0px 1px 0px 0px #45D6D6;
+  -webkit-box-shadow: inset 0px 1px 0px 0px #45D6D6;
+  box-shadow: inset 0px 1px 0px 0px #45D6D6;
+  background-color: #2CBBBB;
+  border: 1px solid #27A0A0;
+  display: inline-block;
+  cursor: pointer;
+  color: #FFFFFF;
+  /*font-family: 'Open Sans Condensed', sans-serif;*/
+  font-size: 14px;
+  padding: 8px 18px;
+  text-decoration: none;
+  text-transform: uppercase; }
+
+.overlay-content input[type="button"]:hover,
+.overlay-content input[type="submit"]:hover {
+  background: linear-gradient(to bottom, #34CACA 5%, #30C9C9 100%);
+  background-color: #34CACA; }
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+  #overlay a {
+    font-size: 20px; }
+
+  #overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px; } }
+#myTopnav {
+  text-align: center; }
+
+.topmenu {
+  list-style-type: none;
+  padding: 1% 0; }
+  .topmenu li {
+    display: inline;
+    padding: 0 1%;
+    text-transform: uppercase; }
+    .topmenu li a {
+      transition: 0.3s;
+      color: black;
+      text-decoration: none; }
+
+.topmenu .icon {
+  display: none; }
+
+.headerwrapper {
   width: 100%; }
-  .container h1, .gallery h1, .contact h1 {
+  .headerwrapper h1 {
     text-align: center;
     font-size: 150%;
     line-height: 140%;
-    padding: 1%; }
+    padding-top: 1%; }
 
-.gallery, .contact {
-  overflow: auto;
+.sliderwrapper {
+  margin: auto;
   position: relative; }
-  .gallery h2, .contact h2 {
-    position: absolute;
-    top: 40%;
-    left: -10%;
-    z-index: -1;
-    color: #ce8686;
-    font-size: 1000%;
-    font-weight: bolder; }
+  .sliderwrapper .slides {
+    display: block;
+    max-height: 500px;
+    margin: auto; }
 
-.backtext {
-  position: relative; }
+.slides {
+  display: none; }
 
-.column-left,
-.column-right,
-.column-left::before,
-.column-right::before {
-  width: 50%; }
-
-.column-right,
-.column-left {
-  float: left; }
-
-.column-left::before,
-.column-right::before {
-  content: '';
+.scrollleft,
+.scrollright {
   position: absolute;
-  top: 0;
-  bottom: 0;
-  z-index: -2;
-  background-color: #bababa; }
-
-.column-right,
-.column-right::before {
-  left: 50%; }
-
-ul {
-  position: absolute;
-  top: 10%;
-  left: 65%;
-  font-size: 200%;
-  line-height: 2.0; }
-
-.nocolumn {
-  clear: both;
+  top: 50%;
+  transform: translate(0%, -50%);
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  display: inline-block;
   text-align: center;
-  height: 200px; }
-  .nocolumn div {
-    height: 80%;
-    width: 80%;
-    margin: auto;
-    margin-top: 10%;
-    margin-bottom: 10%; }
+  color: #fff;
+  background-color: #000;
+  overflow: hidden;
+  z-index: 1;
+  padding: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 24px; }
+
+.scrollleft {
+  left: 0%; }
+
+.scrollright {
+  right: 0%; }
 
 /*# sourceMappingURL=style.css.map */
