@@ -8,52 +8,48 @@
 
 <body>
 
-    <div class="container">
+    <div class="headerwrapper">
         <h1>View Finder </br> Photography</h1>
-    </div>
-
-    <div>
-        <img src="images/Figues.png" alt="Figs" width="100%">
-    </div>
-
-    <div class="gallery">
-        <div class="column-left">
-            <img src="images/Workspace.jpg" alt="WorkSpace" width="100%">
-        </div>
-        <div class="column-right">
-            <ul>
-                <li>COCKTAIL</li>
-                <li>FOOD</li>
-                <li>HOSPITALITY</li>
-                <li>LIFESTYLE</li>
-            </ul>
-            <div class="backtext">
-                <h2>GALLERY</h2>
-            </div>
+        <div id="menuwrapper">
+            <ul class="topmenu" id="myTopnav">
+              <li><a href="#galleries">Galleries</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="javascript:void(0)" onclick="openContact()">Contact</a></li>
+              <li><a href="#about">About</a></li>
+              <!--<li class="icon">
+                <a href="javascript:void(0);" onclick="myFunction()">&#9776;</a>
+            </li>-->
+        </ul>
         </div>
     </div>
 
-    <div class="container nocolumn">
-        <div>
-            <h3>BEHIND THE LENS</h3>
-            <p>I specialise in hospitality photography, cocktails & food. I worked on several projects for Lancaster London Hotel and K West Hotel & Spa. Based in London, UK</p>
-        </div>
+    <!-- The overlay -->
+    <div id="overlay">
+
+      <!-- Button to close the overlay navigation -->
+      <a href="javascript:void(0)" class="closebtn" onclick="closeContact()">&times;</a>
+
+      <!-- Overlay content -->
+      <div class="overlay-content">
+          <h2>Contact</h2>
+          <form>
+            <input type="text" name="field1" placeholder="Full Name" />
+            <input type="email" name="field2" placeholder="Email" />
+            <textarea placeholder="Message" onkeyup="adjust_textarea(this)"></textarea>
+            <input type="button" value="Send Message" />
+          </form>
+      </div>
+
     </div>
 
-    <div class="contact">
-        <div class="column-left">
-            <h4>CONTACT</h4>
-            <div class="backtext">
-                <h2>CONTACT</h2>
-            </div>
-        </div>
-        <div class="column-right">
-            <img src="images/Room.jpg" alt="Room" width="100%">
-        </div>
+    <div class="sliderwrapper">
+        <img class="slides" src="images/Figues.png">
+        <img class="slides" src="images/Room.jpg">
+        <img class="slides" src="images/Workspace.jpg">
+        <a class="scrollleft" onclick="plusDivs(-1)">&#10094;</a>
+        <a class="scrollright" onclick="plusDivs(1)">&#10095;</a>
     </div>
 
-    <div>
-        <h5>INSTAGRAM</h5>
-    </div>
 </body>
+<script type="text/javascript" src="js/script.js"></script>
 </html>
