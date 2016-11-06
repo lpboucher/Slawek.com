@@ -10,11 +10,9 @@
     position: relative;
 }
 
-.slides {
-    display:none;
-}
-.scrollleft,
-.scrollright {
+
+#scrollleft,
+#scrollright {
     position: absolute;
     top: 50%;
     transform: translate(0%,-50%);
@@ -32,9 +30,9 @@
     cursor: pointer;
     font-size: 24px;
 }
-.scrollleft {
+#scrollleft {
     left: 0%;
 }
-.scrollright {
+#scrollright {
     right: 0%;
 }

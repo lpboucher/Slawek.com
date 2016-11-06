@@ -195,11 +195,8 @@ body.modal-open {
     max-height: 500px;
     margin: auto; }
 
-.slides {
-  display: none; }
-
-.scrollleft,
-.scrollright {
+#scrollleft,
+#scrollright {
   position: absolute;
   top: 50%;
   transform: translate(0%, -50%);
@@ -217,10 +214,10 @@ body.modal-open {
   cursor: pointer;
   font-size: 24px; }
 
-.scrollleft {
+#scrollleft {
   left: 0%; }
 
-.scrollright {
+#scrollright {
   right: 0%; }
 
 /*# sourceMappingURL=style.css.map */
