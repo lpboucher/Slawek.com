@@ -187,14 +187,6 @@ body.modal-open {
     line-height: 140%;
     padding-top: 1%; }
 
-.sliderwrapper {
-  margin: auto;
-  position: relative; }
-  .sliderwrapper .slides {
-    display: block;
-    max-height: 500px;
-    margin: auto; }
-
 #scrollleft,
 #scrollright {
   position: absolute;
@@ -219,5 +211,21 @@ body.modal-open {
 
 #scrollright {
   right: 0%; }
+
+div {
+  position: relative; }
+  div #slidercontainer {
+    transition: left 0.5s;
+    position: absolute;
+    left: 265.5px;
+    font-size: 0;
+    white-space: nowrap;
+    overflow-x: hidden; }
+    div #slidercontainer li {
+      display: inline; }
+      div #slidercontainer li .photos {
+        display: initial;
+        max-height: 500px;
+        opacity: 0.6; }
 
 /*# sourceMappingURL=style.css.map */

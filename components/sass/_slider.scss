@@ -1,15 +1,5 @@
 // slider.scss
 // ==============
-.sliderwrapper {
-    .slides {
-        display:block;
-        max-height:500px;
-        margin: auto;
-    }
-    margin: auto;
-    position: relative;
-}
-
 
 #scrollleft,
 #scrollright {
@@ -35,4 +25,23 @@
 }
 #scrollright {
     right: 0%;
+}
+div {
+    #slidercontainer {
+        li {
+            .photos {
+                display: initial;
+                max-height:500px;
+                opacity:0.6;
+            }
+            display:inline;
+        }
+        transition: left 0.5s;
+        position:absolute;
+        left:265.5px;
+        font-size: 0;
+        white-space: nowrap;
+        overflow-x: hidden;
+    }
+    position: relative;
 }
