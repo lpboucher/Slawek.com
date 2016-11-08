@@ -19,6 +19,9 @@ time, mark, audio, video, input {
 	font: inherit;
 	vertical-align: baseline;
 }
+html, body {
+	height: 100%;
+}
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
@@ -27,6 +30,7 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
 	overflow-x:hidden;
+	margin: 0;
 }
 ol, ul {
 	list-style: none;
@@ -45,8 +49,4 @@ table {
 }
 img {
     display:block;
-}
-
-body{
-    margin: 0;
 }

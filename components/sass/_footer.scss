@@ -1,0 +1,15 @@
+// footer.scss
+// ==============
+
+#footerwrapper {
+    #socialcontainer {
+        li {
+            .social {
+                display: initial;
+                margin: 0 calc((100% - (32px * 3)) / 6);
+            }
+            display:inline;
+        }
+        font-size: 0;
+    }
+}

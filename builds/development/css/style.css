@@ -18,6 +18,9 @@ time, mark, audio, video, input {
   font: inherit;
   vertical-align: baseline; }
 
+html, body {
+  height: 100%; }
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
@@ -25,7 +28,8 @@ footer, header, hgroup, menu, nav, section {
 
 body {
   line-height: 1;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  margin: 0; }
 
 ol, ul {
   list-style: none; }
@@ -44,9 +48,6 @@ table {
 
 img {
   display: block; }
-
-body {
-  margin: 0; }
 
 body.modal-open {
   overflow: hidden;
@@ -191,7 +192,7 @@ body.modal-open {
 #scrollleft,
 #scrollright {
   position: absolute;
-  top: 50%;
+  top: 40%;
   transform: translate(0%, -50%);
   width: 40px;
   height: 40px;
@@ -213,20 +214,30 @@ body.modal-open {
 #scrollright {
   right: 0%; }
 
-div {
-  position: relative; }
-  div #slidercontainer {
+#gallerywrapper {
+  position: relative;
+  height: 100%; }
+  #gallerywrapper #slidercontainer {
     transition: left 0.5s;
     position: absolute;
     left: 265.5px;
     font-size: 0;
     white-space: nowrap;
-    overflow-x: hidden; }
-    div #slidercontainer li {
+    overflow-x: hidden;
+    height: 100%; }
+    #gallerywrapper #slidercontainer li {
       display: inline; }
-      div #slidercontainer li .photos {
+      #gallerywrapper #slidercontainer li .photos {
         display: initial;
         max-height: 500px;
         opacity: 0.6; }
+
+#footerwrapper #socialcontainer {
+  font-size: 0; }
+  #footerwrapper #socialcontainer li {
+    display: inline; }
+    #footerwrapper #socialcontainer li .social {
+      display: initial;
+      margin: 0 calc((100% - (32px * 3)) / 6); }
 
 /*# sourceMappingURL=style.css.map */

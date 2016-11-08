@@ -4,7 +4,7 @@
 #scrollleft,
 #scrollright {
     position: absolute;
-    top: 50%;
+    top: 40%;
     transform: translate(0%,-50%);
     width: 40px;
     height: 40px;
@@ -26,7 +26,7 @@
 #scrollright {
     right: 0%;
 }
-div {
+#gallerywrapper {
     #slidercontainer {
         li {
             .photos {
@@ -42,6 +42,8 @@ div {
         font-size: 0;
         white-space: nowrap;
         overflow-x: hidden;
+        height:100%;
     }
     position: relative;
+    height:100%;
 }
