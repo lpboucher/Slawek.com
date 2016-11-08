@@ -50,7 +50,8 @@ body {
 
 body.modal-open {
   overflow: hidden;
-  position: fixed; }
+  position: fixed;
+  width: 100%; }
 
 #overlay {
   /* Height & width depends on how you want to reveal the overlay (see JS below) */
