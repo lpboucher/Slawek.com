@@ -1,9 +1,12 @@
 // style.scss
 // ==============
-//Core partials
+//Variables
 @import "variables";
+
+//Core partials
 @import "reset";
-@import "overlay";
+@import "main";
 @import "header";
+@import "overlay";
 @import "slider";
 @import "footer";
