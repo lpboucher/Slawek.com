@@ -11,6 +11,7 @@ window.onload = function() {
         sumWidth = runningSum[i] + x[i].width;
         runningSum.push(sumWidth);
     }
+    plusDivs(1);
 }
 
 function plusDivs(n) {
