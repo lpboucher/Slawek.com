@@ -235,7 +235,7 @@ body.modal-open {
       #gallerywrapper #slidercontainer li .photos {
         display: initial;
         max-height: 100%;
-        opacity: 0.1; }
+        opacity: 0.4; }
 
 #footerwrapper {
   margin: 2.5% 0 1% 0; }
