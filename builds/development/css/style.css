@@ -54,7 +54,7 @@ body {
 
 #myTopnav {
   text-align: center;
-  padding: 1.5% 0; }
+  padding: 2% 0; }
 
 .topmenu {
   list-style-type: none; }
@@ -72,7 +72,7 @@ body {
 
 .headerwrapper {
   width: 100%;
-  margin: 2.5% 0 1% 0; }
+  margin: 2.5% 0 0 0; }
   .headerwrapper h1 {
     text-align: center;
     font-size: 150%;
@@ -167,14 +167,14 @@ body.modal-open {
 
 .overlay-content input[type="button"],
 .overlay-content input[type="submit"] {
-  -moz-box-shadow: inset 0px 1px 0px 0px #45D6D6;
-  -webkit-box-shadow: inset 0px 1px 0px 0px #45D6D6;
-  box-shadow: inset 0px 1px 0px 0px #45D6D6;
-  background-color: #2CBBBB;
-  border: 1px solid #27A0A0;
+  -moz-box-shadow: inset 0px 1px 0px 0px #d49482;
+  -webkit-box-shadow: inset 0px 1px 0px 0px #d49482;
+  box-shadow: inset 0px 1px 0px 0px #d49482;
+  background-color: #C06349;
+  border: 1px solid #e7c4bb;
   display: inline-block;
   cursor: pointer;
-  color: #FFFFFF;
+  color: #f1f1f1;
   /*font-family: 'Open Sans Condensed', sans-serif;*/
   font-size: 14px;
   padding: 8px 18px;
@@ -183,8 +183,8 @@ body.modal-open {
 
 .overlay-content input[type="button"]:hover,
 .overlay-content input[type="submit"]:hover {
-  background: linear-gradient(to bottom, #34CACA 5%, #30C9C9 100%);
-  background-color: #34CACA; }
+  background: linear-gradient(to bottom, #C06349 5%, #d49482 100%);
+  background-color: #C06349; }
 
 /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
 @media screen and (max-height: 450px) {
@@ -238,21 +238,21 @@ body.modal-open {
         opacity: 0.4; }
 
 #footerwrapper {
-  margin: 2.5% 0 1% 0; }
+  margin: 2% 0 1% 0; }
   #footerwrapper #socialcontainer {
     font-size: 0;
-    margin: 0 40%; }
+    margin: 0 45%; }
     #footerwrapper #socialcontainer li {
       display: inline; }
       #footerwrapper #socialcontainer li .social {
         display: initial;
-        margin: 0 calc((100% - (32px + 32px + 55px)) / 6);
-        height: 32px;
+        margin: 0 calc((100% - (18px + 18px + 31px)) / 6);
+        height: 18px;
         width: auto; }
   #footerwrapper #velodesign {
     color: #c9c9c9;
     text-align: center;
     font-size: 0.7em;
-    margin: 1% 0; }
+    margin: 2% 0 1% 0; }
 
 /*# sourceMappingURL=style.css.map */
