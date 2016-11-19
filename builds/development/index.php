@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Slawek.com</title>
+  <title>VIEW FINDER PHOTOGRAPHY</title>
   <link rel="stylesheet" href="css/style.css">
   <script src="https://use.typekit.net/ide8gms.js"></script>
   <script>try{Typekit.load({ async: true });}catch(e){}</script>
@@ -19,9 +19,6 @@
               <li><a href="#projects">Projects</a></li>
               <li><a href="#about">About</a></li>
               <li><a href="javascript:void(0)" onclick="openContact()">Contact</a></li>
-              <!--<li class="icon">
-                <a href="javascript:void(0);" onclick="myFunction()">&#9776;</a>
-            </li>-->
         </ul>
         </div>
     </div>
@@ -36,11 +33,21 @@
       <div class="overlay-content">
           <h3>Contact</h3>
           <form>
-            <input type="text" name="field1" placeholder="Full Name" />
-            <input type="email" name="field2" placeholder="Email" />
-            <textarea placeholder="Message" onkeyup="adjust_textarea(this)"></textarea>
-            <input type="button" value="Send Message" />
-          </form>
+            <div>
+                <input type="text" name="field1" placeholder="Full Name" />
+                <input type="email" name="field2" placeholder="Email" />
+                <textarea placeholder="Message" onkeyup="adjust_textarea(this)"></textarea>
+                <input type="button" value="Send Message" />
+            </div>
+            <p class="contact-content">
+                Slawek Thomas</br>
+                Flat 8, 18 Palace Court</br>
+                London, UK</br>
+                W2 4HU</br>
+                (999) 999-9999</br>
+                Slawek@view.com
+            </p>
+        </form>
       </div>
 
     </div>

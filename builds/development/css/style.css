@@ -123,7 +123,7 @@ body.modal-open {
   transition: 0.3s; }
 
 .overlay-content {
-  /*font-family: 'Open Sans Condensed', arial, sans;*/
+  height: 40%;
   width: 500px;
   padding: 30px;
   background: #f1f1f1;
@@ -136,17 +136,27 @@ body.modal-open {
   background: #353535;
   text-transform: uppercase;
   text-align: center;
-  /*font-family: 'Open Sans Condensed', sans-serif;*/
   color: #f1f1f1;
   font-size: 18px;
   font-weight: 100;
   padding: 20px;
   margin: -30px -30px 30px -30px; }
 
-.overlay-content input[type="text"],
-.overlay-content input[type="email"],
-.overlay-content textarea,
-.overlay-content select {
+.overlay-content div {
+  float: left;
+  width: 50%; }
+
+.overlay-content .contact-content {
+  text-align: center;
+  padding: 5% 0;
+  line-height: 1.4em;
+  color: #363636; }
+
+.overlay-content div input[type="text"],
+.overlay-content div input[type="email"],
+.overlay-content div textarea,
+.overlay-content div select {
+  font-size: 1em;
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -158,15 +168,14 @@ body.modal-open {
   border-bottom: 1px solid #ddd;
   background: transparent;
   margin-bottom: 10px;
-  font: 16px Arial, Helvetica, sans-serif;
   height: 45px; }
 
-.overlay-content textarea {
+.overlay-content div textarea {
   resize: none;
   overflow: hidden; }
 
-.overlay-content input[type="button"],
-.overlay-content input[type="submit"] {
+.overlay-content div input[type="button"],
+.overlay-content div input[type="submit"] {
   -moz-box-shadow: inset 0px 1px 0px 0px #d49482;
   -webkit-box-shadow: inset 0px 1px 0px 0px #d49482;
   box-shadow: inset 0px 1px 0px 0px #d49482;
@@ -175,14 +184,13 @@ body.modal-open {
   display: inline-block;
   cursor: pointer;
   color: #f1f1f1;
-  /*font-family: 'Open Sans Condensed', sans-serif;*/
   font-size: 14px;
   padding: 8px 18px;
   text-decoration: none;
   text-transform: uppercase; }
 
-.overlay-content input[type="button"]:hover,
-.overlay-content input[type="submit"]:hover {
+.overlay-content div input[type="button"]:hover,
+.overlay-content div input[type="submit"]:hover {
   background: linear-gradient(to bottom, #C06349 5%, #d49482 100%);
   background-color: #C06349; }
 
@@ -190,11 +198,11 @@ body.modal-open {
 @media screen and (max-height: 450px) {
   #overlay a {
     font-size: 20px; }
-
   #overlay .closebtn {
     font-size: 40px;
     top: 15px;
     right: 35px; } }
+
 #scrollleft,
 #scrollright {
   position: absolute;
@@ -254,5 +262,3 @@ body.modal-open {
     text-align: center;
     font-size: 0.7em;
     margin: 2% 0 1% 0; }
-
-/*# sourceMappingURL=style.css.map */

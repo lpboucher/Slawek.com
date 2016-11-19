@@ -40,8 +40,8 @@ body.modal-open {
 }
 
 //Form style
-.overlay-content{
-    /*font-family: 'Open Sans Condensed', arial, sans;*/
+.overlay-content {
+    height: 40%;
     width: 500px;
     padding: 30px;
     background: $white;
@@ -49,24 +49,36 @@ body.modal-open {
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
     -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
     -webkit-box-shadow:  0px 0px 15px rgba(0, 0, 0, 0.22);
-
 }
 .overlay-content h3{
     background: darken($grey, 30%);
     text-transform: uppercase;
     text-align: center;
-    /*font-family: 'Open Sans Condensed', sans-serif;*/
     color: $white;
     font-size: 18px;
     font-weight: 100;
     padding: 20px;
     margin: -30px -30px 30px -30px;
 }
-.overlay-content input[type="text"],
-.overlay-content input[type="email"],
-.overlay-content textarea,
-.overlay-content select
+.overlay-content {
+    div {
+        float: left;
+        width: 50%;
+    }
+    .contact-content {
+        text-align: center;
+        padding: 5% 0;
+        line-height: 1.4em;
+        color: $darkgrey;
+    }
+}
+
+.overlay-content div input[type="text"],
+.overlay-content div input[type="email"],
+.overlay-content div textarea,
+.overlay-content div select
 {
+    font-size: 1em;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -78,15 +90,14 @@ body.modal-open {
     border-bottom: 1px solid #ddd;
     background: transparent;
     margin-bottom: 10px;
-    font: 16px Arial, Helvetica, sans-serif;
     height: 45px;
 }
-.overlay-content textarea{
+.overlay-content div textarea{
     resize:none;
     overflow: hidden;
 }
-.overlay-content input[type="button"],
-.overlay-content input[type="submit"]{
+.overlay-content div input[type="button"],
+.overlay-content div input[type="submit"]{
     -moz-box-shadow: inset 0px 1px 0px 0px lighten($pink, 15%);
     -webkit-box-shadow: inset 0px 1px 0px 0px lighten($pink, 15%);
     box-shadow: inset 0px 1px 0px 0px lighten($pink, 15%);
@@ -95,14 +106,13 @@ body.modal-open {
     display: inline-block;
     cursor: pointer;
     color: $white;
-    /*font-family: 'Open Sans Condensed', sans-serif;*/
     font-size: 14px;
     padding: 8px 18px;
     text-decoration: none;
     text-transform: uppercase;
 }
-.overlay-content input[type="button"]:hover,
-.overlay-content input[type="submit"]:hover {
+.overlay-content div input[type="button"]:hover,
+.overlay-content div input[type="submit"]:hover {
     background:linear-gradient(to bottom, $pink 5%, lighten($pink, 15%) 100%);
     background-color:$pink;
 }
