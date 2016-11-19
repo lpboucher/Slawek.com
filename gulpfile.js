@@ -35,6 +35,7 @@ gulp.task('watch', function() {
   gulp.watch(['builds/development/*.html',
                 'builds/development/css/*.css'], ['html']);
   gulp.watch('components/js/*.js', ['js']);
+  gulp.watch('components/sass/*.scss', ['sass']);
 });
 
-gulp.task('default', ['connect', 'html', 'js', 'watch']);
+gulp.task('default', ['connect', 'html', 'sass', 'js', 'watch']);
