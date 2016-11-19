@@ -8,10 +8,11 @@
   },
   "author": "VELO Design",
   "devDependencies": {
+    "browser-sync": "^2.18.1",
     "gulp": "^3.9.1",
     "gulp-browserify": "^0.5.1",
     "gulp-concat": "^2.6.0",
-    "gulp-connect": "^5.0.0",
+    "gulp-connect-php": "0.0.8",
     "gulp-sass": "^2.3.2"
   }
 }

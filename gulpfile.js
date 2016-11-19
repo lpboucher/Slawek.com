@@ -1,41 +1,47 @@
 var gulp = require('gulp'),
-    connect = require('gulp-connect'),
+    php = require('gulp-connect-php'),
     browserify = require('gulp-browserify'),
     concat = require('gulp-concat'),
-    sass = require('gulp-sass');
+    sass = require('gulp-sass'),
+    browserSync = require('browser-sync');
 
-gulp.task('connect', function() {
-  connect.server({
-    root: 'builds/development/',
-    livereload: true
-  });
+gulp.task('php', function() {
+  php.server({ base: 'builds/development/', port: 8010, keepalive: true})
 });
 
-gulp.task('html', function() {
-  gulp.src(['builds/development/*.html',
-            'builds/development/css/*.css'])
-    .pipe(connect.reload())
+gulp.task('browser-sync', ['php'], function() {
+    browserSync({
+        proxy: '127.0.0.1:8010',
+        port: 8030,
+        open: true,
+        notify: false
+    });
+});
+
+gulp.task('bs-reload', function () {
+    browserSync.reload();
 });
 
 gulp.task('sass', function() {
     gulp.src(['components/sass/*.scss'])
     .pipe(sass())
     .pipe(gulp.dest('builds/development/css'))
-    .pipe(connect.reload())
+    .pipe(browserSync.reload({stream: true}));
 })
 
 gulp.task('js', function() {
   gulp.src('components/js/*.js')
     .pipe(concat('script.js'))
     .pipe(gulp.dest('builds/development/js'))
-    .pipe(connect.reload())
+    .pipe(browserSync.reload({stream: true}))
 });
 
-gulp.task('watch', function() {
-  gulp.watch(['builds/development/*.html',
-                'builds/development/css/*.css'], ['html']);
+gulp.task('watch', ['browser-sync'], function() {
   gulp.watch('components/js/*.js', ['js']);
-  gulp.watch('components/sass/*.scss', ['sass']);
+  gulp.watch('components/sass/*.scss', ['sass'])
+  gulp.watch(['builds/development/*.html',
+                'builds/development/css/*.css',
+                'builds/development/*.php'], ['bs-reload']);
 });
 
-gulp.task('default', ['connect', 'html', 'sass', 'js', 'watch']);
+gulp.task('default', ['sass', 'js', 'watch']);
