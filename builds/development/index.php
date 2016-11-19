@@ -12,7 +12,7 @@
 
     <div class="headerwrapper">
         <h1>VIEW FINDER PHOTOGRAPHY</h1>
-        <h2>Slawek Tomas</h2>
+        <h2>Slawek Thomas</h2>
         <div id="menuwrapper">
             <ul class="topmenu" id="myTopnav">
               <li><a href="#galleries">Galleries</a></li>
