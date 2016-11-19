@@ -12,7 +12,7 @@
 
     <div class="headerwrapper">
         <h1>VIEW FINDER PHOTOGRAPHY</h1>
-        <h2>Slawek Thomas</h2>
+        <h2>Slawek Tomas</h2>
         <div id="menuwrapper">
             <ul class="topmenu" id="myTopnav">
               <li><a href="#galleries">Galleries</a></li>
@@ -40,12 +40,10 @@
                 <input type="button" value="Send Message" />
             </div>
             <p class="contact-content">
-                Slawek Thomas</br>
-                Flat 8, 18 Palace Court</br>
+                Slawek Tomas</br>
                 London, UK</br>
-                W2 4HU</br>
-                (999) 999-9999</br>
-                Slawek@view.com
+                +44(0)7821-122621</br>
+                slawek.tomas@gmail.com
             </p>
         </form>
       </div>
@@ -56,8 +54,11 @@
         <ul id="slidercontainer">
             <li><img class="photos" src="images/Workspace.jpg"></li>
             <li><img class="photos" src="images/Figues.png"></li>
-            <li><img class="photos" src="images/Room.jpg"></li>
-            <li><img class="photos" src="images/Figues.png"></li>
+            <li><img class="photos" src="images/strawberrycocktail.jpg"></li>
+            <li><img class="photos" src="images/afternoontea.jpg"></li>
+            <li><img class="photos" src="images/kwestsuite.jpg"></li>
+            <li><img class="photos" src="images/lifestyle.jpg"></li>
+            <li><img class="photos" src="images/raspberrycocktail.jpg"></li>
         </ul>
         <a id="scrollleft" onclick="plusDivs(-1)">&#10094;</a>
         <a id="scrollright" onclick="plusDivs(1)">&#10095;</a>

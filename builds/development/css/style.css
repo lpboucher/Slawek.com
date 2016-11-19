@@ -148,8 +148,8 @@ body.modal-open {
 
 .overlay-content .contact-content {
   text-align: center;
-  padding: 5% 0;
-  line-height: 1.4em;
+  padding: 10% 0;
+  line-height: 1.5em;
   color: #363636; }
 
 .overlay-content div input[type="text"],
@@ -206,7 +206,7 @@ body.modal-open {
 #scrollleft,
 #scrollright {
   position: absolute;
-  top: 40%;
+  top: 50%;
   transform: translate(0%, -50%);
   width: 50px;
   height: 60px;
@@ -218,6 +218,7 @@ body.modal-open {
   overflow: hidden;
   z-index: 1;
   padding: 0;
+  border-radius: 30%;
   cursor: pointer;
   font-size: 24px; }
 

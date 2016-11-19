@@ -4,7 +4,7 @@
 #scrollleft,
 #scrollright {
     position: absolute;
-    top: 40%;
+    top: 50%;
     transform: translate(0%,-50%);
     width: 50px;
     height: 60px;
@@ -16,7 +16,7 @@
     overflow: hidden;
     z-index: 1;
     padding: 0;
-    //border-radius: 50%;
+    border-radius: 30%;
     cursor: pointer;
     font-size: 24px;
 }
