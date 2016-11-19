@@ -1,7 +1,8 @@
 var gulp = require('gulp'),
     connect = require('gulp-connect'),
     browserify = require('gulp-browserify'),
-    concat = require('gulp-concat');
+    concat = require('gulp-concat'),
+    sass = require('gulp-sass');
 
 gulp.task('connect', function() {
   connect.server({
@@ -15,6 +16,13 @@ gulp.task('html', function() {
             'builds/development/css/*.css'])
     .pipe(connect.reload())
 });
+
+gulp.task('sass', function() {
+    gulp.src(['components/sass/*.scss'])
+    .pipe(sass())
+    .pipe(gulp.dest('builds/development/css'))
+    .pipe(connect.reload())
+})
 
 gulp.task('js', function() {
   gulp.src('components/js/*.js')
