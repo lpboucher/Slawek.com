@@ -28,6 +28,6 @@ function showDivs(n) {
      x[i].style.opacity = 0.4;
   }
   moveBy = runningSum[slideIndex-1] - (screen.availWidth - x[slideIndex-1].width) / 2;
-  slider.style.left = - moveBy + "px";
+  slider.style.transform = "translate(" + - moveBy + "px)";
   x[slideIndex-1].style.opacity = 1;
 }
