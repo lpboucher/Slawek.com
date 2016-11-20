@@ -123,6 +123,9 @@ body.modal-open {
   transition: 0.3s; }
 
 .overlay-content {
+  height: 100%; }
+
+#contact-content {
   height: 40%;
   width: 500px;
   padding: 30px;
@@ -142,11 +145,11 @@ body.modal-open {
   padding: 20px;
   margin: -30px -30px 30px -30px; }
 
-.overlay-content div {
+.overlay-content #contact-content div {
   float: left;
   width: 50%; }
 
-.overlay-content .contact-content {
+.overlay-content #contact-content .contact-info {
   text-align: center;
   padding: 10% 0;
   line-height: 1.5em;
@@ -193,6 +196,26 @@ body.modal-open {
 .overlay-content div input[type="submit"]:hover {
   background: linear-gradient(to bottom, #C06349 5%, #d49482 100%);
   background-color: #C06349; }
+
+/* About Section style */
+#about-content {
+  height: 100%; }
+  #about-content .about-wrapper {
+    height: 100%; }
+    #about-content .about-wrapper .img-left {
+      height: 100%;
+      width: 50%;
+      float: left; }
+      #about-content .about-wrapper .img-left img {
+        width: 50%;
+        float: left; }
+    #about-content .about-wrapper .right {
+      height: 100%;
+      width: 50%;
+      float: left; }
+      #about-content .about-wrapper .right p {
+        color: #c9c9c9;
+        text-align: center; }
 
 /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
 @media screen and (max-height: 450px) {

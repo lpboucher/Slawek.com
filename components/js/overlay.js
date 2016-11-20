@@ -1,20 +1,30 @@
 /* Open */
 function openContact() {
-    document.getElementById("overlay").style.height = "100%";
-    document.body.className+='modal-open';
-    document.getElementById("scrollleft").style.display = "none";
-    document.getElementById("scrollright").style.display = "none";
+    document.getElementById("about-content").style.display = "none";
+    document.getElementById("contact-content").style.display = "block";
+    openModal();
 }
-
-/* Close */
-function closeContact() {
-    document.getElementById("overlay").style.height = "0%";
-    document.body.classList.remove('modal-open');
-    document.getElementById("scrollleft").style.display = "inline-block";
-    document.getElementById("scrollright").style.display = "inline-block";
+function openAbout() {
+    document.getElementById("contact-content").style.display = "none";
+    document.getElementById("about-content").style.display = "block";
+    openModal();
 }
 /* Adjust text area in contact form automatically */
 function adjust_textarea(h) {
     h.style.height = "20px";
     h.style.height = (h.scrollHeight)+"px";
+}
+/* Open */
+function openModal() {
+    document.getElementById("overlay").style.height = "100%";
+    document.body.className+='modal-open';
+    document.getElementById("scrollleft").style.display = "none";
+    document.getElementById("scrollright").style.display = "none";
+}
+/* Close */
+function closeModal() {
+    document.getElementById("overlay").style.height = "0%";
+    document.body.classList.remove('modal-open');
+    document.getElementById("scrollleft").style.display = "inline-block";
+    document.getElementById("scrollright").style.display = "inline-block";
 }

@@ -17,7 +17,7 @@
             <ul class="topmenu" id="myTopnav">
               <li><a href="#galleries">Galleries</a></li>
               <li><a href="#projects">Projects</a></li>
-              <li><a href="#about">About</a></li>
+              <li><a href="javascript:void(0)" onclick="openAbout()">About</a></li>
               <li><a href="javascript:void(0)" onclick="openContact()">Contact</a></li>
         </ul>
         </div>
@@ -27,25 +27,41 @@
     <div id="overlay">
 
       <!-- Button to close the overlay navigation -->
-      <a href="javascript:void(0)" class="closebtn" onclick="closeContact()">&times;</a>
+      <a href="javascript:void(0)" class="closebtn" onclick="closeModal()">&times;</a>
 
       <!-- Overlay content -->
       <div class="overlay-content">
-          <h3>Contact</h3>
-          <form>
-            <div>
-                <input type="text" name="field1" placeholder="Full Name" />
-                <input type="email" name="field2" placeholder="Email" />
-                <textarea placeholder="Message" onkeyup="adjust_textarea(this)"></textarea>
-                <input type="button" value="Send Message" />
+          <div id="contact-content">
+              <h3>Contact</h3>
+              <form>
+                <div>
+                    <input type="text" name="field1" placeholder="Full Name" />
+                    <input type="email" name="field2" placeholder="Email" />
+                    <textarea placeholder="Message" onkeyup="adjust_textarea(this)"></textarea>
+                    <input type="button" value="Send Message" />
+                </div>
+                <p class="contact-info">
+                    Slawek Tomas</br>
+                    London, UK</br>
+                    +44(0)7821-122621</br>
+                    slawek.tomas@gmail.com
+                </p>
+            </form>
+        </div>
+        <div id="about-content">
+            <div class="about-wrapper">
+                <div class="img-left">
+                    <img src="images/lifestyle.jpg" alt="" width="600px"/>
+                </div>
+                <div class="right">
+                    <p>
+                        This is Slawek, he is a pretty cool dude and he also makes
+                         awesome photos. Maybe you should hire him for your next
+                         photo session?
+                    </p>
+                </div>
             </div>
-            <p class="contact-content">
-                Slawek Tomas</br>
-                London, UK</br>
-                +44(0)7821-122621</br>
-                slawek.tomas@gmail.com
-            </p>
-        </form>
+        </div>
       </div>
 
     </div>

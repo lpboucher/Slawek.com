@@ -1,9 +1,8 @@
-var slideIndex = 1;
+var slideIndex = 2;
 var x = [];
 var runningSum = [];
 
 window.onload = function() {
-    //var slideIndex = 1;
     runningSum.push(0);
     x = document.getElementsByClassName("photos");
     var sumWidth;
@@ -11,7 +10,7 @@ window.onload = function() {
         sumWidth = runningSum[i] + x[i].width;
         runningSum.push(sumWidth);
     }
-    plusDivs(1);
+    showDivs(slideIndex);
 }
 
 function plusDivs(n) {
@@ -19,6 +18,7 @@ function plusDivs(n) {
 }
 
 function showDivs(n) {
+  x = Array.from(x);
   var i;
   var moveBy = 0;
   var slider = document.getElementById("slidercontainer");
