@@ -3,14 +3,16 @@ var x = [];
 var runningSum = [];
 
 window.onload = function() {
-    runningSum.push(0);
-    x = document.getElementsByClassName("photos");
-    var sumWidth;
-    for (i = 0; i < x.length; i++) {
-        sumWidth = runningSum[i] + x[i].width;
-        runningSum.push(sumWidth);
-    }
-    showDivs(slideIndex);
+    if (document.body.id == "index") {
+            runningSum.push(0);
+            x = document.getElementsByClassName("photos");
+            var sumWidth;
+            for (i = 0; i < x.length; i++) {
+                sumWidth = runningSum[i] + x[i].width;
+                runningSum.push(sumWidth);
+            }
+            showDivs(slideIndex);
+        }
 }
 
 function plusDivs(n) {

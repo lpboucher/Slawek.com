@@ -8,7 +8,7 @@
   <script>try{Typekit.load({ async: true });}catch(e){}</script>
 </head>
 
-<body>
+<body id="index">
 
     <div class="headerwrapper">
         <h1>VIEW FINDER PHOTOGRAPHY</h1>

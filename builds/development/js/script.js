@@ -34,14 +34,16 @@ var x = [];
 var runningSum = [];
 
 window.onload = function() {
-    runningSum.push(0);
-    x = document.getElementsByClassName("photos");
-    var sumWidth;
-    for (i = 0; i < x.length; i++) {
-        sumWidth = runningSum[i] + x[i].width;
-        runningSum.push(sumWidth);
-    }
-    showDivs(slideIndex);
+    if (document.body.id == "index") {
+            runningSum.push(0);
+            x = document.getElementsByClassName("photos");
+            var sumWidth;
+            for (i = 0; i < x.length; i++) {
+                sumWidth = runningSum[i] + x[i].width;
+                runningSum.push(sumWidth);
+            }
+            showDivs(slideIndex);
+        }
 }
 
 function plusDivs(n) {
@@ -61,4 +63,22 @@ function showDivs(n) {
   moveBy = runningSum[slideIndex-1] - (screen.availWidth - x[slideIndex-1].width) / 2;
   slider.style.transform = "translate(" + - moveBy + "px)";
   x[slideIndex-1].style.opacity = 1;
+}
+
+function showImage(smSrc, lgSrc) {
+    document.getElementById('lightbox').src = smSrc;
+    showLargeImagePanel();
+    unselectAll();
+    setTimeout(function() {
+        document.getElementById('lightbox').src = lgSrc;
+    }, 1)
+}
+function showLargeImagePanel() {
+    document.getElementById('imgPanel').style.width = '100%';
+}
+function unselectAll() {
+    if(document.selection)
+        document.selection.empty();
+    if(window.getSelection)
+        window.getSelection().removeAllRanges();
 }
