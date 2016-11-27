@@ -15,7 +15,7 @@
         <h2>Slawek Tomas</h2>
         <div id="menuwrapper">
             <ul class="topmenu" id="myTopnav">
-              <li><a href="#galleries">Galleries</a></li>
+              <li><a href="gallery.php">Galleries</a></li>
               <li><a href="#projects">Projects</a></li>
               <li><a href="javascript:void(0)" onclick="openAbout()">About</a></li>
               <li><a href="javascript:void(0)" onclick="openContact()">Contact</a></li>
