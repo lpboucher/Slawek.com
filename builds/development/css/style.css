@@ -286,3 +286,16 @@ body.modal-open {
     text-align: center;
     font-size: 0.7em;
     margin: 2% 0 1% 0; }
+
+.gallerycontainer {
+  column-count: 3;
+  column-gap: 0px;
+  -webkit-column-count: 3;
+  -webkit-column-gap: 0px;
+  -moz-column-count: 3;
+  -moz-column-gap: 0px; }
+  .gallerycontainer img {
+    width: 100% !important;
+    height: auto !important; }
+  .gallerycontainer img:hover {
+    opacity: 0.2; }
