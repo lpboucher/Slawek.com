@@ -50,16 +50,17 @@
         </div>
         <div id="about-content">
             <div class="about-wrapper">
-                <div class="img-left">
-                    <img src="images/lifestyle.jpg" alt="" width="600px"/>
+                <div class="about-left">
+                    <img src="images/Room.jpg" alt=""/>
                 </div>
-                <div class="right">
-                    <p>
-                        This is Slawek, he is a pretty cool dude and he also makes
-                         awesome photos. Maybe you should hire him for your next
-                         photo session?
-                    </p>
+                <div class="about-right">
+                    <h4 class="about-text">BEHIND THE LENS</h4>
+                    <hr>
+                    <p class="about-text">This is Slawek, he is a pretty cool dude and he also makes
+                     awesome photos. He makes awesome photographs of cocktails, food, hotel rooms and whatever you want to be honest. Maybe you should hire him for your next
+                     photo session?</p>
                 </div>
+            </div>
             </div>
         </div>
       </div>
