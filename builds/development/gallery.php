@@ -11,7 +11,7 @@
   <script>try{Typekit.load({ async: true });}catch(e){}</script>
 </head>
 
-<body>
+<body id="gallery">
 
     <div class="headerwrapper">
         <!-- Commenting out on page for now
@@ -69,8 +69,15 @@
         </div>
       </div>
 
+    <div id="imgPanel" onclick="this.style.width='0'">
+        <img id="lightbox" />
+    </div>
+
     <div class="gallerycontainer">
-        <img class="" src="images/gallery/Workspace.jpg">
+        <div class="" onclick="showImage('images/gallery/Workspace.jpg', 'images/gallery/Workspace.jpg')">
+            <img class="" src="images/gallery/Workspace.jpg">
+            <p>&#43;</a>
+        </div>
         <img class="" src="images/gallery/Figues.png">
         <img class="" src="images/gallery/strawberrycocktail.jpg">
         <img class="" src="images/gallery/afternoontea.jpg">

@@ -1,13 +1,40 @@
 // gallery.scss
 // ==============
 
+#imgPanel {
+    display: block;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    width: 0%;
+    transition-property: width;
+    transition-duration: 0.3s;
+}
+#lightbox {
+    width: 100%;
+}
+
 .gallerycontainer {
+    div {
+        img {
+            width: 100% !important;
+            height: auto !important;
+        }
+        p {
+            position:absolute;
+            display: none;
+            font-size: 6em;
+            text-decoration: none;
+            color: $darkgrey;
+            bottom: 5%;
+            right: 5%;
+        }
+        position:relative;
+    }
     img {
         width: 100% !important;
         height: auto !important;
-    }
-    img:hover {
-        opacity: 0.2;
     }
     column-count: 3;
     column-gap: 0px;
@@ -15,4 +42,14 @@
     -webkit-column-gap: 0px;
     -moz-column-count:3;
     -moz-column-gap: 0px;
+}
+.gallerycontainer div:hover {
+    p {
+        display: block;
+    }
+    img {
+        opacity: 0.4;
+    }
+    background-color:white;
+    cursor: pointer;
 }
