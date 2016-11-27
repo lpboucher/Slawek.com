@@ -76,20 +76,56 @@
     <div class="gallerycontainer">
         <div class="" onclick="showImage('images/gallery/Workspace.jpg', 'images/gallery/Workspace.jpg')">
             <img class="" src="images/gallery/Workspace.jpg">
-            <p>&#43;</a>
+            <p>&#43;</p>
         </div>
-        <img class="" src="images/gallery/Figues.png">
-        <img class="" src="images/gallery/strawberrycocktail.jpg">
-        <img class="" src="images/gallery/afternoontea.jpg">
-        <img class="" src="images/gallery/kwestsuite.jpg">
-        <img class="" src="images/gallery/lifestyle.jpg">
-        <img class="" src="images/gallery/raspberrycocktail.jpg">
-        <img class="" src="images/gallery/strawberrycocktail.jpg">
-        <img class="" src="images/gallery/afternoontea.jpg">
-        <img class="" src="images/gallery/kwestsuite.jpg">
-        <img class="" src="images/gallery/lifestyle.jpg">
-        <img class="" src="images/gallery/Workspace.jpg">
-        <img class="" src="images/gallery/Figues.png">
+        <div class="">
+            <img class="" src="images/gallery/Figues.png">
+            <p>&#43;</p>
+        </div>
+        <div class="">
+            <img class="" src="images/gallery/strawberrycocktail.jpg">
+            <p>&#43;</p>
+        </div>
+        <div class="">
+            <img class="" src="images/gallery/afternoontea.jpg">
+            <p>&#43;</p>
+        </div>
+        <div class="">
+            <img class="" src="images/gallery/kwestsuite.jpg">
+            <p>&#43;</p>
+        </div>
+        <div class="">
+            <img class="" src="images/gallery/lifestyle.jpg">
+            <p>&#43;</p>
+        </div>
+        <div class="">
+            <img class="" src="images/gallery/raspberrycocktail.jpg">
+            <p>&#43;</p>
+        </div>
+        <div class="">
+            <img class="" src="images/gallery/strawberrycocktail.jpg">
+            <p>&#43;</p>
+        </div>
+        <div class="">
+            <img class="" src="images/gallery/afternoontea.jpg">
+            <p>&#43;</p>
+        </div>
+        <div class="">
+            <img class="" src="images/gallery/kwestsuite.jpg">
+            <p>&#43;</p>
+        </div>
+        <div class="">
+            <img class="" src="images/gallery/lifestyle.jpg">
+            <p>&#43;</p>
+        </div>
+        <div class="">
+            <img class="" src="images/gallery/Workspace.jpg">
+            <p>&#43;</p>
+        </div>
+        <div class="">
+            <img class="" src="images/gallery/Figues.png">
+            <p>&#43;</p>
+        </div>
     </div>
 </body>
 <script type="text/javascript" src="js/script.js"></script>
