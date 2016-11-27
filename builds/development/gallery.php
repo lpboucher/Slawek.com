@@ -12,6 +12,16 @@
 </head>
 
 <body>
-
+    <div class="gallerycontainer">
+        <ul id="">
+            <li><img class="" src="images/gallery/Workspace.jpg"></li>
+            <li><img class="" src="images/gallery/Figues.png"></li>
+            <li><img class="" src="images/gallery/strawberrycocktail.jpg"></li>
+            <li><img class="" src="images/gallery/afternoontea.jpg"></li>
+            <li><img class="" src="images/gallery/kwestsuite.jpg"></li>
+            <li><img class="" src="images/gallery/lifestyle.jpg"></li>
+            <li><img class="" src="images/gallery/raspberrycocktail.jpg"></li>
+        </ul>
+    </div>
 </body>
 </html>
