@@ -66,7 +66,7 @@
 
     </div>
 
-    <div id="gallerywrapper">
+    <div id="sliderwrapper">
         <ul id="slidercontainer">
             <li><img class="photos" src="images/Workspace.jpg"></li>
             <li><img class="photos" src="images/Figues.png"></li>

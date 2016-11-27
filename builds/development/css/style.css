@@ -251,10 +251,10 @@ body.modal-open {
 #scrollright {
   right: 0%; }
 
-#gallerywrapper {
+#sliderwrapper {
   position: relative;
   height: 75%; }
-  #gallerywrapper #slidercontainer {
+  #sliderwrapper #slidercontainer {
     transition: transform 0.5s;
     position: absolute;
     transform: translate(265.5px);
@@ -262,9 +262,9 @@ body.modal-open {
     white-space: nowrap;
     overflow-x: hidden;
     height: 100%; }
-    #gallerywrapper #slidercontainer li {
+    #sliderwrapper #slidercontainer li {
       display: inline; }
-      #gallerywrapper #slidercontainer li .photos {
+      #sliderwrapper #slidercontainer li .photos {
         display: initial;
         max-height: 100%;
         opacity: 0.4; }
