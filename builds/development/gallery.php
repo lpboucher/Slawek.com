@@ -1,4 +1,4 @@
-
+<?php require_once("functions.php"); ?>
 
 <!DOCTYPE html PUBLIC>
 
@@ -73,8 +73,19 @@
         <img id="lightbox" />
     </div>
 
+    <?php
+
+    $current_gallery = "Food";
+    $path = "images/gallery/{$current_gallery}/*.jpg";
+
+    foreach (glob($path) as $filename) {
+    echo "<p>{$filename}<p/>";
+}
+
+     ?>
+
     <div class="gallerycontainer">
-        <div class="" onclick="showImage('images/gallery/Workspace.jpg', 'images/gallery/Workspace.jpg')">
+        <!--<div class="" onclick="showImage('images/gallery/Workspace.jpg', 'images/gallery/Workspace.jpg')">
             <img class="" src="images/gallery/Workspace.jpg">
             <p>&#43;</p>
         </div>
@@ -124,6 +135,90 @@
         </div>
         <div class="">
             <img class="" src="images/gallery/Figues.png">
+            <p>&#43;</p>
+        </div>-->
+        <div class="" >
+            <img class="" src="images/gallery/Food/afternoontea.jpg">
+            <p>&#43;</p>
+        </div>
+        <div class="" >
+            <img class="" src="images/gallery/Food/apples.jpg">
+            <p>&#43;</p>
+        </div>
+        <div class="" >
+            <img class="" src="images/gallery/Food/asparagus.jpg">
+            <p>&#43;</p>
+        </div>
+        <div class="" >
+            <img class="" src="images/gallery/Food/brownies.jpg">
+            <p>&#43;</p>
+        </div>
+        <div class="" >
+            <img class="" src="images/gallery/Food/cheese.jpg">
+            <p>&#43;</p>
+        </div>
+        <div class="" >
+            <img class="" src="images/gallery/Food/chocolate.jpg">
+            <p>&#43;</p>
+        </div>
+        <div class="" >
+            <img class="" src="images/gallery/Food/cupcakes.jpg">
+            <p>&#43;</p>
+        </div>
+        <div class="" >
+            <img class="" src="images/gallery/Food/darktable.jpg">
+            <p>&#43;</p>
+        </div>
+        <div class="" >
+            <img class="" src="images/gallery/Food/fireplace.jpg">
+            <p>&#43;</p>
+        </div>
+        <div class="" >
+            <img class="" src="images/gallery/Food/fish.jpg">
+            <p>&#43;</p>
+        </div>
+        <div class="" >
+            <img class="" src="images/gallery/Food/pasta.jpg">
+            <p>&#43;</p>
+        </div>
+        <div class="" >
+            <img class="" src="images/gallery/Food/pastries.jpg">
+            <p>&#43;</p>
+        </div>
+        <div class="" >
+            <img class="" src="images/gallery/Food/pear.jpg">
+            <p>&#43;</p>
+        </div>
+        <div class="" >
+            <img class="" src="images/gallery/Food/pigsblanket.jpg">
+            <p>&#43;</p>
+        </div>
+        <div class="" >
+            <img class="" src="images/gallery/Food/plate.jpg">
+            <p>&#43;</p>
+        </div>
+        <div class="" >
+            <img class="" src="images/gallery/Food/presentation.jpg">
+            <p>&#43;</p>
+        </div>
+        <div class="" >
+            <img class="" src="images/gallery/Food/puncki.jpg">
+            <p>&#43;</p>
+        </div>
+        <div class="" >
+            <img class="" src="images/gallery/Food/strawberrysplash.jpg">
+            <p>&#43;</p>
+        </div>
+        <div class="" >
+            <img class="" src="images/gallery/Food/sweets.jpg">
+            <p>&#43;</p>
+        </div>
+        <div class="" >
+            <img class="" src="images/gallery/Food/teasnacks.jpg">
+            <p>&#43;</p>
+        </div>
+        <div class="" >
+            <img class="" src="images/gallery/Food/tomatoes.jpg">
             <p>&#43;</p>
         </div>
     </div>
