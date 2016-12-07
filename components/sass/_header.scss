@@ -9,27 +9,52 @@
 .topmenu {
     li {
         a {
-        transition: 0.3s;
         color: $lightgrey;
         text-decoration: none;
         }
         .dropdown {
+            li {
+                padding: 5% 0;
+            }
             position: absolute;
             top: 100%;
-            left: 0;
+            left: -20%;
             display: none;
         }
         display: inline-block;
-        padding: 0 1%;
+        padding: 0.5% 0;
+        margin: 0 1%;
         text-transform: uppercase;
         position: relative;
     }
     list-style-type: none;
 }
 
-.topmenu li:hover ul {
+.topmenu li:hover {
+        .dropdown {
+        display: block;
+        z-index: 1;
+    }
+}
+.topmenu li:after {
     display: block;
-    z-index: 1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 1px;
+    background-color: $lightgrey;
+    content: "";
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;
+}
+.topmenu li:hover {
+  color: $lightgrey;
+}
+.topmenu li:hover:after {
+  width: 100%;
 }
 
 .topmenu {
