@@ -16,11 +16,11 @@
         <div id="menuwrapper">
             <ul class="topmenu" id="myTopnav">
               <li><a href="gallery.php">Gallery</a>
-                  <!--<ul class="">
+                  <ul class="dropdown">
                       <li><a href="#">Food</a></li>
                       <li><a href="#">Hospitality</a></li>
                       <li><a href="#">Cocktails</a></li>
-                  </ul>-->
+                  </ul>
               </li>
               <li><a href="#projects">Projects</a></li>
               <li><a href="javascript:void(0)" onclick="openAbout()">About</a></li>

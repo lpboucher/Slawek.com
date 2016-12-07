@@ -59,13 +59,23 @@ body {
 .topmenu {
   list-style-type: none; }
   .topmenu li {
-    display: inline;
+    display: inline-block;
     padding: 0 1%;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    position: relative; }
     .topmenu li a {
       transition: 0.3s;
       color: #c9c9c9;
       text-decoration: none; }
+    .topmenu li .dropdown {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      display: none; }
+
+.topmenu li:hover ul {
+  display: block;
+  z-index: 1; }
 
 .topmenu .icon {
   display: none; }

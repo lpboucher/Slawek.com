@@ -8,24 +8,28 @@
 
 .topmenu {
     li {
-        a{
+        a {
         transition: 0.3s;
         color: $lightgrey;
         text-decoration: none;
         }
-        display: inline;
+        .dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            display: none;
+        }
+        display: inline-block;
         padding: 0 1%;
         text-transform: uppercase;
+        position: relative;
     }
     list-style-type: none;
 }
 
-.topmenu {
-    li {
-        a:hover {
-
-        }
-    }
+.topmenu li:hover ul {
+    display: block;
+    z-index: 1;
 }
 
 .topmenu {
