@@ -25,7 +25,7 @@ function show_navigation() {
     $nav .= "<ul class=\"dropdown\">";
     $nav .= "<li><a href=\"gallery.php?gallerytype=food\">Food</a></li>";
     $nav .= "<li><a href=\"gallery.php?gallerytype=hospitality\">Hospitality</a></li>";
-    $nav .= "<li><a href=\"gallery.php?gallerytype=cocktail\">Cocktails</a></li>";
+    $nav .= "<li><a href=\"gallery.php?gallerytype=cocktails\">Cocktails</a></li>";
     $nav .= "</ul></li>";
     $nav .= "<li><a href=\"#projects\">Projects</a></li>";
     $nav .= "<li><a href=\"javascript:void(0)\" onclick=\"openAbout()\">About</a></li>";
