@@ -12,10 +12,8 @@
 
     <div class="gallerycontainer">
         <?php
-
         $current_gallery = find_selected_gallery();
         echo show_gallery($current_gallery);
-
          ?>
     </div>
 
