@@ -70,8 +70,11 @@ body {
     .topmenu li .dropdown {
       position: absolute;
       top: 100%;
-      left: -20%;
-      display: none; }
+      display: none;
+      background-color: #363636;
+      padding: 10%;
+      text-align: left;
+      box-shadow: -2px 1.5px 1px #c9c9c9; }
       .topmenu li .dropdown li {
         padding: 5% 0; }
 
@@ -349,12 +352,12 @@ body.modal-open {
   z-index: 100;
   top: 0;
   left: 0;
-  width: 0%;
+  height: 0%;
   transition-property: width;
   transition-duration: 0.3s; }
 
 #lightbox {
-  width: 100%; }
+  height: 100%; }
 
 .gallerycontainer {
   column-count: 3;

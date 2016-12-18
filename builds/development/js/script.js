@@ -74,7 +74,7 @@ function showImage(smSrc, lgSrc) {
     }, 1)
 }
 function showLargeImagePanel() {
-    document.getElementById('imgPanel').style.width = '100%';
+    document.getElementById('imgPanel').style.height = '100%';
 }
 function unselectAll() {
     if(document.selection)
