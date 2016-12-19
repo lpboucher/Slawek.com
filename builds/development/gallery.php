@@ -6,8 +6,13 @@
 
 <?php echo show_overlay(); ?>
 
-    <div id="imgPanel" onclick="this.style.height='0'">
-        <img id="lightbox" />
+    <div id="imgPanel">
+        <div class="lightboxcontainer">
+            <div class="imgwrap">
+                <img id="lightbox" />
+            </div>
+        </div>
+        <a href="javascript:void(0)" class="close" onclick="closeHighRes()">&times;</a>
     </div>
 
     <div class="gallerycontainer">
