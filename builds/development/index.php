@@ -1,3 +1,4 @@
+<?php require_once("functions.php"); ?>
 <?php include("layouts.php"); ?>
 
 <?php echo show_header("index"); ?>
