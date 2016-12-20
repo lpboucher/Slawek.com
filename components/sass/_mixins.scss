@@ -19,4 +19,10 @@
       @content;
     }
   }
+
+  @else if $breakpoint == "xlarge" {
+    @media (min-width: 1800px) {
+      @content;
+    }
+  }
 }

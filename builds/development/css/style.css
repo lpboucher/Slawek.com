@@ -17,6 +17,21 @@ time, mark, audio, video, input {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline; }
+  @media (min-width: 1800px) {
+    html, body, div, span, applet, object, iframe,
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+    a, abbr, acronym, address, big, cite, code,
+    del, dfn, em, img, ins, kbd, q, s, samp,
+    small, strike, strong, sub, sup, tt, var,
+    b, u, i, center,
+    dl, dt, dd, ol, ul, li,
+    fieldset, form, label, legend,
+    table, caption, tbody, tfoot, thead, tr, th, td,
+    article, aside, canvas, details, embed,
+    figure, figcaption, footer, header, hgroup,
+    menu, nav, output, ruby, section, summary,
+    time, mark, audio, video, input {
+      font-size: 105%; } }
 
 html, body {
   height: 100%; }
@@ -170,6 +185,10 @@ body.modal-open {
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
   -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
   -webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22); }
+  @media (min-width: 1800px) {
+    #contact-content {
+      height: 30%;
+      width: 600px; } }
 
 .overlay-content h3 {
   background: #353535;
@@ -253,6 +272,9 @@ body.modal-open {
       width: 50%; }
       #about-content .about-wrapper .about-left img {
         max-width: 100%; }
+        @media (min-width: 1800px) {
+          #about-content .about-wrapper .about-left img {
+            width: 100%; } }
     #about-content .about-wrapper .about-right {
       float: left;
       position: relative;
@@ -327,6 +349,9 @@ body.modal-open {
         display: initial;
         max-height: 100%;
         opacity: 0.4; }
+        @media (min-width: 1800px) {
+          #sliderwrapper #slidercontainer li .photos {
+            height: 100%; } }
 
 #footerwrapper {
   margin: 2% 0 1% 0; }
@@ -407,6 +432,14 @@ body.modal-open {
   .gallerycontainer img {
     width: 100% !important;
     height: auto !important; }
+  @media (min-width: 1800px) {
+    .gallerycontainer {
+      column-count: 4;
+      column-gap: 0px;
+      -webkit-column-count: 4;
+      -webkit-column-gap: 0px;
+      -moz-column-count: 4;
+      -moz-column-gap: 0px; } }
 
 .gallerycontainer div:hover {
   background-color: white;
