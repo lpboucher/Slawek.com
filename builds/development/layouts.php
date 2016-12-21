@@ -5,14 +5,14 @@ function show_header($page) {
     $output .= "<html lang=\"en\">";
     $output .= "<head>";
     $output .= "<meta charset=\"UTF-8\">";
-    $output .= "<title>VIEW FINDER PHOTOGRAPHY</title>";
+    $output .= "<title>VIEWFINDER PHOTOGRAPHY</title>";
     $output .= "<link rel=\"stylesheet\" href=\"css/style.css\">";
     $output .= "<script src=\"https://use.typekit.net/ide8gms.js\"></script>";
     $output .= "<script>try{Typekit.load({ async: true });}catch(e){}</script>";
     $output .= "</head>";
     $output .= "<body id=\"{$page}\">";
     $output .= "<div class=\"headerwrapper\">";
-    $output .= "<h1>VIEW FINDER PHOTOGRAPHY</h1>";
+    $output .= "<h1>VIEWFINDER PHOTOGRAPHY</h1>";
     $output .= "<h2>Slawek Tomas</h2>";
 
     return $output;
