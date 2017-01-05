@@ -28,6 +28,12 @@ function closeModal() {
     document.getElementById("scrollleft").style.display = "inline-block";
     document.getElementById("scrollright").style.display = "inline-block";
 }
+/* Add use of escape as event */
+document.addEventListener('keyup', function(e) {
+    if (e.keyCode == 27) {
+        closeModal();
+    }
+});
 
 var slideIndex = 2;
 var x = [];
