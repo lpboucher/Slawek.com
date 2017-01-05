@@ -33,3 +33,12 @@ function showDivs(n) {
   slider.style.transform = "translate(" + - moveBy + "px)";
   x[slideIndex-1].style.opacity = 1;
 }
+
+/* Add use of arrows as event */
+document.addEventListener('keyup', function(e) {
+    if (e.keyCode == 37) {
+        plusDivs(-1);
+    } else if (e.keyCode == 39) {
+        plusDivs(1);
+    } else {}
+});
