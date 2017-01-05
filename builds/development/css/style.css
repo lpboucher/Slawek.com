@@ -65,11 +65,12 @@ img {
   display: block; }
 
 body {
-  background-color: #171717; }
+  background-color: #171717;
+  overflow-y: hidden; }
 
 #myTopnav {
   text-align: center;
-  padding: 2% 0; }
+  padding: 1.5% 0; }
 
 .topmenu {
   list-style-type: none; }
@@ -122,7 +123,8 @@ body {
 
 .headerwrapper {
   width: 100%;
-  margin: 2.5% 0 0 0; }
+  margin: 2% 0 0 0;
+  height: 15%; }
   .headerwrapper h1 {
     text-align: center;
     font-size: 150%;
@@ -339,7 +341,7 @@ body.modal-open {
 
 #sliderwrapper {
   position: relative;
-  height: 75%; }
+  height: 70%; }
   #sliderwrapper #slidercontainer {
     transition: transform 0.5s;
     position: absolute;
@@ -359,7 +361,8 @@ body.modal-open {
             height: 100%; } }
 
 #footerwrapper {
-  margin: 2% 0 1% 0; }
+  margin: 1.5% 0 1% 0;
+  height: 10%; }
   #footerwrapper #socialcontainer {
     font-size: 0;
     margin: 0 45%; }
@@ -374,7 +377,7 @@ body.modal-open {
     color: #c9c9c9;
     text-align: center;
     font-size: 0.7em;
-    margin: 2% 0 1% 0; }
+    margin: 1.5% 0 1% 0; }
 
 #imgPanel {
   position: fixed;
