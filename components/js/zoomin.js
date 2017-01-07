@@ -1,3 +1,7 @@
+setTimeout(function() {
+        document.getElementById('loading').style.display = 'none';
+    }, 1400); // using setTimeout to simulate page-load
+
 function showImage(smSrc, lgSrc) {
     document.getElementById('lightbox').src = smSrc;
     showLargeImagePanel();

@@ -15,6 +15,8 @@
         <a href="javascript:void(0)" class="close" onclick="closeHighRes()">&times;</a>
     </div>
 
+    <div id="loading"><div>Loading gallery. Please wait.</div></div>
+
     <div class="gallerycontainer">
         <?php
         $current_gallery = find_selected_gallery();
