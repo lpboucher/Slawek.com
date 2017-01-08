@@ -25,3 +25,9 @@ function closeHighRes() {
     document.getElementById("imgPanel").style.display = "none";
     //document.body.classList.remove('modal-open');
 }
+/* Add use of escape as event */
+document.addEventListener('keyup', function(e) {
+    if (e.keyCode == 27) {
+        closeHighRes();
+    }
+});
