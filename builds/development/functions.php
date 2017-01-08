@@ -25,8 +25,8 @@ function show_gallery($current_gallery) {
     foreach (glob($path) as $filename) {
         $folderpath = explode("/",$filename);
         $highResFile = "{$folderpath[0]}/{$folderpath[1]}/{$folderpath[2]}/HighRes/{$folderpath[3]}";
-        $output .= "<div class=\"\" onclick=\"showImage('{$filename}', '{$highResFile}')\" >";
-        $output .= "<img class=\"\" src=\"{$filename}\">";
+        $output .= "<div class=\"\" onclick=\"showImage(this, '{$filename}', '{$highResFile}')\" >";
+        $output .= "<img class=\"galleryitems\" src=\"{$filename}\">";
         $output .= "<p>&#43;</p></div>";
     }
 

@@ -80,11 +80,14 @@ document.addEventListener('keyup', function(e) {
     } else {}
 });
 
+var current;
+
 setTimeout(function() {
         document.getElementById('loading').style.display = 'none';
-    }, 1400); // using setTimeout to simulate page-load
+    }, 1600); // using setTimeout to simulate page-load
 
-function showImage(smSrc, lgSrc) {
+function showImage(currentImage, smSrc, lgSrc) {
+    current = currentImage.firstChild;
     document.getElementById('lightbox').src = smSrc;
     showLargeImagePanel();
     unselectAll();
@@ -111,5 +114,29 @@ function closeHighRes() {
 document.addEventListener('keyup', function(e) {
     if (e.keyCode == 27) {
         closeHighRes();
-    }
+    } else if (e.keyCode == 37) {
+        showNext(-1);
+    } else if (e.keyCode == 39) {
+        showNext(1);
+    } else {}
 });
+
+function showNext(n) {
+    var imageList = [];
+    var index;
+    imageList = Array.from(document.getElementsByClassName("galleryitems"));
+    index = imageList.indexOf(current);
+    document.getElementById('lightbox').src = imageList[index + n].src;
+    setTimeout(function() {
+        document.getElementById('lightbox').src = insertHighRes(imageList[index + n].src);
+    }, 1000)
+    current = imageList[index + n];
+}
+
+function insertHighRes(nextSrc) {
+    var newImg;
+    newImg = nextSrc.split("/");
+    newImg.splice(6, 0, "HighRes");
+    newImg = newImg.join("/");
+    return newImg;
+}

@@ -13,6 +13,8 @@
             </div>
         </div>
         <a href="javascript:void(0)" class="close" onclick="closeHighRes()">&times;</a>
+        <a id="scrollleft" onclick="showNext(-1)">&#10094;</a>
+        <a id="scrollright" onclick="showNext(1)">&#10095;</a>
     </div>
 
     <div id="loading"><div>Loading gallery. Please wait.</div></div>
