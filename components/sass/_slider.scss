@@ -24,7 +24,9 @@
     opacity: 0.75;
 }
 #scrollleft:hover,
-#scrollright:hover {
+#scrollright:hover,
+#imgPanel #scrollleft:hover,
+#imgPanel #scrollright:hover  {
     //color: $lightgrey;
     color: $darkgrey;
     //background-color: $darkgrey;

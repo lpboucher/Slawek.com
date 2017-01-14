@@ -328,7 +328,9 @@ body.modal-open {
   opacity: 0.75; }
 
 #scrollleft:hover,
-#scrollright:hover {
+#scrollright:hover,
+#imgPanel #scrollleft:hover,
+#imgPanel #scrollright:hover {
   color: #171717;
   background-color: #c9c9c9; }
 
