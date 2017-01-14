@@ -313,24 +313,24 @@ body.modal-open {
   position: absolute;
   top: 50%;
   transform: translate(0%, -50%);
-  width: 50px;
-  height: 60px;
-  line-height: 60px;
+  width: 30px;
+  height: 100%;
+  line-height: 2000%;
   display: inline-block;
   text-align: center;
-  color: #171717;
-  background-color: #c9c9c9;
+  color: #c9c9c9;
+  background-color: #171717;
   overflow: hidden;
   z-index: 1;
   padding: 0;
-  border-radius: 30%;
   cursor: pointer;
-  font-size: 24px; }
+  font-size: 24px;
+  opacity: 0.75; }
 
 #scrollleft:hover,
 #scrollright:hover {
-  color: #c9c9c9;
-  background-color: #171717; }
+  color: #171717;
+  background-color: #c9c9c9; }
 
 #scrollleft {
   left: 0%; }

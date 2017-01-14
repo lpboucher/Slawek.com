@@ -6,24 +6,29 @@
     position: absolute;
     top: 50%;
     transform: translate(0%,-50%);
-    width: 50px;
-    height: 60px;
-    line-height: 60px;
+    width: 30px;
+    height: 100%;
+    line-height: 2000%;
     display: inline-block;
     text-align: center;
-    color: $darkgrey;
-    background-color: $lightgrey;
+    //color: $darkgrey;
+    color: $lightgrey;
+    //background-color: $lightgrey;
+    background-color: $darkgrey;
     overflow: hidden;
     z-index: 1;
     padding: 0;
-    border-radius: 30%;
+    //border-radius: 30%;
     cursor: pointer;
     font-size: 24px;
+    opacity: 0.75;
 }
 #scrollleft:hover,
 #scrollright:hover {
-    color: $lightgrey;
-    background-color: $darkgrey;
+    //color: $lightgrey;
+    color: $darkgrey;
+    //background-color: $darkgrey;
+    background-color: $lightgrey;
 }
 #scrollleft {
     left: 0%;
