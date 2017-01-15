@@ -1,9 +1,5 @@
 var current;
 
-setTimeout(function() {
-        document.getElementById('loading').style.display = 'none';
-    }, 1600); // using setTimeout to simulate page-load
-
 function showImage(currentImage, smSrc, lgSrc) {
     current = currentImage.firstChild;
     document.getElementById('lightbox').src = smSrc;
@@ -28,16 +24,6 @@ function closeHighRes() {
     document.getElementById("imgPanel").style.display = "none";
     //document.body.classList.remove('modal-open');
 }
-/* Add use of escape as event */
-document.addEventListener('keyup', function(e) {
-    if (e.keyCode == 27) {
-        closeHighRes();
-    } else if (e.keyCode == 37) {
-        showNext(-1);
-    } else if (e.keyCode == 39) {
-        showNext(1);
-    } else {}
-});
 
 function showNext(n) {
     var imageList = [];

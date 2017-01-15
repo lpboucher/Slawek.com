@@ -2,19 +2,6 @@ var slideIndex = 2;
 var x = [];
 var runningSum = [];
 
-window.onload = function() {
-    if (document.body.id == "index") {
-            runningSum.push(0);
-            x = document.getElementsByClassName("photos");
-            var sumWidth;
-            for (i = 0; i < x.length; i++) {
-                sumWidth = runningSum[i] + x[i].width;
-                runningSum.push(sumWidth);
-            }
-            showDivs(slideIndex);
-        }
-}
-
 function plusDivs(n) {
   showDivs(slideIndex += n);
 }
@@ -33,12 +20,3 @@ function showDivs(n) {
   slider.style.transform = "translate(" + - moveBy + "px)";
   x[slideIndex-1].style.opacity = 1;
 }
-
-/* Add use of arrows as event */
-document.addEventListener('keyup', function(e) {
-    if (e.keyCode == 37) {
-        plusDivs(-1);
-    } else if (e.keyCode == 39) {
-        plusDivs(1);
-    } else {}
-});
