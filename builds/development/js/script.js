@@ -26,13 +26,8 @@ window.onload = function(){
         }, 1600); // using setTimeout to simulate page-load
     };
     if (document.body.id === "index") {
-        runningSum.push(0);
-        x = document.getElementsByClassName("photos");
-        var sumWidth;
-        for (i = 0; i < x.length; i++) {
-            sumWidth = runningSum[i] + x[i].width;
-            runningSum.push(sumWidth);
-        }
+        addClones();
+        getWidths();
         showDivs(slideIndex);
     };
 };
@@ -75,7 +70,6 @@ var runningSum = [];
 function plusDivs(n) {
   showDivs(slideIndex += n);
 }
-
 function showDivs(n) {
   x = Array.from(x);
   var i;
@@ -89,6 +83,35 @@ function showDivs(n) {
   moveBy = runningSum[slideIndex-1] - (screen.availWidth - x[slideIndex-1].width) / 2;
   slider.style.transform = "translate(" + - moveBy + "px)";
   x[slideIndex-1].style.opacity = 1;
+}
+function addClones() {
+    var imageList = [];
+    var slider = document.getElementById("slidercontainer");
+    imageList = Array.from(document.getElementsByClassName("photos"));
+    slider.insertBefore(createNode("early", imageList),slider.firstChild);
+    slider.appendChild(createNode("late", imageList));
+}
+//Creates a new list node and appends it a new object image
+function createNode(location, images) {
+    var newNode = document.createElement("li");
+    var newImg = document.createElement("img");
+    newImg.className += "photos";
+    newNode.appendChild(newImg);
+    if (location == "early") {
+        newImg.src = images[images.length - 1].src;
+    } else if (location == "late") {
+        newImg.src = images[0].src;
+    }
+    return newNode;
+}
+function getWidths() {
+    var sumWidth;
+    runningSum.push(0);
+    x = document.getElementsByClassName("photos");
+    for (i = 0; i < x.length; i++) {
+        sumWidth = runningSum[i] + x[i].width;
+        runningSum.push(sumWidth);
+    }
 }
 
 var current;
@@ -126,7 +149,7 @@ function showNext(n) {
     document.getElementById('lightbox').src = imageList[index + n].src;
     setTimeout(function() {
         document.getElementById('lightbox').src = insertHighRes(imageList[index + n].src);
-    }, 1000)
+    }, 500)
     current = imageList[index + n];
 }
 
