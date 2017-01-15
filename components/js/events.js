@@ -26,13 +26,8 @@ window.onload = function(){
         }, 1600); // using setTimeout to simulate page-load
     };
     if (document.body.id === "index") {
-        runningSum.push(0);
-        x = document.getElementsByClassName("photos");
-        var sumWidth;
-        for (i = 0; i < x.length; i++) {
-            sumWidth = runningSum[i] + x[i].width;
-            runningSum.push(sumWidth);
-        }
+        addClones();
+        getWidths();
         showDivs(slideIndex);
     };
 };

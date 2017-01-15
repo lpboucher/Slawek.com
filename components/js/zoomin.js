@@ -33,7 +33,7 @@ function showNext(n) {
     document.getElementById('lightbox').src = imageList[index + n].src;
     setTimeout(function() {
         document.getElementById('lightbox').src = insertHighRes(imageList[index + n].src);
-    }, 1000)
+    }, 500)
     current = imageList[index + n];
 }
 
