@@ -7,7 +7,7 @@ document.addEventListener('keyup', function(e) {
             showNext(-1);
         } else if (e.keyCode == 39) {
             showNext(1);
-        } else {}
+        }
     } else if (document.body.id == "index") {
         if (e.keyCode == 27) {
             closeModal();
@@ -15,7 +15,7 @@ document.addEventListener('keyup', function(e) {
             plusDivs(-1);
         } else if (e.keyCode == 39) {
             plusDivs(1);
-        } else {}
+        }
     }
 });
 
