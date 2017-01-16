@@ -361,7 +361,7 @@ body.modal-open {
           #sliderwrapper #slidercontainer li .photos {
             height: 100%; } }
 
-.notransition {
+.notransition * {
   -webkit-transition: none !important;
   -moz-transition: none !important;
   -o-transition: none !important;

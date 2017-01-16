@@ -32,6 +32,22 @@ window.onload = function(){
     };
 };
 
+document.getElementById("slidercontainer").addEventListener('transitionend',function() {
+    var slider = document.getElementById("slidercontainer");
+    if (document.body.id === "index") {
+        if (slideIndex > x.length - 1) {
+            slideIndex = 2;
+            document.body.className += "notransition";
+            moveBy = runningSum[slideIndex-1] - (screen.availWidth - x[slideIndex-1].width) / 2;
+            slider.style.transform = "translate(" + - moveBy + "px)";
+            x[slideIndex-1].style.opacity = 1;
+            setTimeout(function() {
+                document.body.className = "";
+            }, 500);
+        };
+    };
+})
+
 /* Open */
 function openContact() {
     document.getElementById("about-content").style.display = "none";
@@ -63,7 +79,7 @@ function closeModal() {
     document.getElementById("scrollright").style.display = "inline-block";
 }
 
-var slideIndex = 2;
+var slideIndex = 3;
 var x = [];
 var runningSum = [];
 
@@ -73,16 +89,28 @@ function plusDivs(n) {
 function showDivs(n) {
   x = Array.from(x);
   var i;
+  var body = document.getElementsByTagName("body");
   var moveBy = 0;
   var slider = document.getElementById("slidercontainer");
-  if (n > x.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = x.length}
+  //if (n > x.length) {slideIndex = 1}
+  //if (n < 1) {slideIndex = x.length}
   for (i = 0; i < x.length; i++) {
      x[i].style.opacity = 0.4;
   }
   moveBy = runningSum[slideIndex-1] - (screen.availWidth - x[slideIndex-1].width) / 2;
   slider.style.transform = "translate(" + - moveBy + "px)";
   x[slideIndex-1].style.opacity = 1;
+  if (slideIndex > x.length - 1) {
+      //body[0].classList.toggle("notransition");
+      /*setTimeout(function(){
+          slider.style.transitionDurantion = "0s";
+          moveBy = runningSum[1] - (screen.availWidth - x[1].width) / 2;
+          slider.style.transform = "translate(" + - moveBy + "px)";
+          x[1].style.opacity = 1;
+          slideIndex = 2;
+      }, 500);*/
+      //body[0].classList.toggle("notransition");
+  }
 }
 function addClones() {
     var imageList = [];

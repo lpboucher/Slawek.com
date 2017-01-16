@@ -31,3 +31,19 @@ window.onload = function(){
         showDivs(slideIndex);
     };
 };
+
+document.getElementById("slidercontainer").addEventListener('transitionend',function() {
+    var slider = document.getElementById("slidercontainer");
+    if (document.body.id === "index") {
+        if (slideIndex > x.length - 1) {
+            slideIndex = 2;
+            document.body.className += "notransition";
+            moveBy = runningSum[slideIndex-1] - (screen.availWidth - x[slideIndex-1].width) / 2;
+            slider.style.transform = "translate(" + - moveBy + "px)";
+            x[slideIndex-1].style.opacity = 1;
+            setTimeout(function() {
+                document.body.className = "";
+            }, 500);
+        };
+    };
+})
