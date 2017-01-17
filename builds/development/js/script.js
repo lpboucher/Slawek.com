@@ -82,9 +82,16 @@ function closeModal() {
 var slideIndex = 3;
 var x = [];
 var runningSum = [];
+var direction;
 
 function plusDivs(n) {
+  direction = n;
   showDivs(slideIndex += n);
+  /*if (n > 0) {
+      direction = "forward";
+  } else if (n < 0) {
+      direction = "backward";
+  }*/
 }
 function showDivs(n) {
   x = Array.from(x);
@@ -92,25 +99,12 @@ function showDivs(n) {
   var body = document.getElementsByTagName("body");
   var moveBy = 0;
   var slider = document.getElementById("slidercontainer");
-  //if (n > x.length) {slideIndex = 1}
-  //if (n < 1) {slideIndex = x.length}
   for (i = 0; i < x.length; i++) {
      x[i].style.opacity = 0.4;
   }
   moveBy = runningSum[slideIndex-1] - (screen.availWidth - x[slideIndex-1].width) / 2;
   slider.style.transform = "translate(" + - moveBy + "px)";
   x[slideIndex-1].style.opacity = 1;
-  if (slideIndex > x.length - 1) {
-      //body[0].classList.toggle("notransition");
-      /*setTimeout(function(){
-          slider.style.transitionDurantion = "0s";
-          moveBy = runningSum[1] - (screen.availWidth - x[1].width) / 2;
-          slider.style.transform = "translate(" + - moveBy + "px)";
-          x[1].style.opacity = 1;
-          slideIndex = 2;
-      }, 500);*/
-      //body[0].classList.toggle("notransition");
-  }
 }
 function addClones() {
     var imageList = [];
