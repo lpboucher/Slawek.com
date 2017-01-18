@@ -69,7 +69,7 @@ body {
 
 #myTopnav {
   text-align: center;
-  padding: 1.5% 0; }
+  padding: 1% 0; }
 
 .topmenu {
   list-style-type: none; }
@@ -131,7 +131,8 @@ body {
   .headerwrapper h2 {
     text-align: center;
     color: #c9c9c9;
-    font-size: 0.9em; }
+    font-size: 0.9em;
+    padding-top: 0.5%; }
 
 body.modal-open {
   overflow: hidden;
@@ -423,13 +424,17 @@ body.modal-open {
 #lightbox {
   height: 100%;
   margin: 0 auto; }
+  @media (min-width: 992px) {
+    #lightbox {
+      height: 100%;
+      width: none; } }
 
 .gallerycontainer {
-  column-count: 3;
+  column-count: 1;
   column-gap: 0px;
-  -webkit-column-count: 3;
+  -webkit-column-count: 1;
   -webkit-column-gap: 0px;
-  -moz-column-count: 3;
+  -moz-column-count: 1;
   -moz-column-gap: 0px; }
   .gallerycontainer div {
     position: relative; }
@@ -447,6 +452,14 @@ body.modal-open {
   .gallerycontainer img {
     width: 100% !important;
     height: auto !important; }
+  @media (min-width: 992px) {
+    .gallerycontainer {
+      column-count: 3;
+      column-gap: 0px;
+      -webkit-column-count: 3;
+      -webkit-column-gap: 0px;
+      -moz-column-count: 3;
+      -moz-column-gap: 0px; } }
 
 .gallerycontainer div:hover {
   background-color: white;

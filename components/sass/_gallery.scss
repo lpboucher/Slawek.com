@@ -41,6 +41,10 @@
 #lightbox {
     height: 100%;
     margin: 0 auto;
+    @include respond-to(medium) {
+        height:100%;
+        width: none;
+    }
 }
 
 .gallerycontainer {
@@ -64,20 +68,20 @@
         width: 100% !important;
         height: auto !important;
     }
-    column-count: 3;
+    column-count: 1;
     column-gap: 0px;
-    -webkit-column-count: 3;
+    -webkit-column-count: 1;
     -webkit-column-gap: 0px;
-    -moz-column-count:3;
+    -moz-column-count:1;
     -moz-column-gap: 0px;
-    //@include respond-to(xlarge) {
-        //column-count: 4;
-        //column-gap: 0px;
-        //-webkit-column-count: 4;
-        //-webkit-column-gap: 0px;
-        //-moz-column-count:4;
-        //-moz-column-gap: 0px;
-    //}
+    @include respond-to(medium) {
+        column-count: 3;
+        column-gap: 0px;
+        -webkit-column-count: 3;
+        -webkit-column-gap: 0px;
+        -moz-column-count:3;
+        -moz-column-gap: 0px;
+    }
 }
 .gallerycontainer div:hover {
     p {

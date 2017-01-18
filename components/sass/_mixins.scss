@@ -26,3 +26,10 @@
     }
   }
 }
+
+// ***Add device orientation in device mixins
+@mixin mobile-first($min, $max, $orientation) {
+    @media only screen and (min-width: $min) and (max-width: $max) and (orientation: $orientation) {
+      @content;
+    }
+}
