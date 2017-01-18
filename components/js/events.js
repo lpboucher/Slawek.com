@@ -35,7 +35,7 @@ window.onload = function(){
 document.getElementById("slidercontainer").addEventListener('transitionend',function() {
     var slider = document.getElementById("slidercontainer");
     if (document.body.id === "index") {
-        if (slideIndex > x.length - 1) {
+        if (slideIndex > x.length - 1 && direction == 1) {
             slideIndex = 2;
             document.body.className += "notransition";
             moveBy = runningSum[slideIndex-1] - (screen.availWidth - x[slideIndex-1].width) / 2;
@@ -43,7 +43,16 @@ document.getElementById("slidercontainer").addEventListener('transitionend',func
             x[slideIndex-1].style.opacity = 1;
             setTimeout(function() {
                 document.body.className = "";
-            }, 500);
+            }, 100);
+        } else if (slideIndex < 2 && direction == -1) {
+            slideIndex = x.length - 1;
+            document.body.className += "notransition";
+            moveBy = runningSum[slideIndex-1] - (screen.availWidth - x[slideIndex-1].width) / 2;
+            slider.style.transform = "translate(" + - moveBy + "px)";
+            x[slideIndex-1].style.opacity = 1;
+            setTimeout(function() {
+                document.body.className = "";
+            }, 100);
         };
     };
 })

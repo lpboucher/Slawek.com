@@ -1,7 +1,7 @@
 var slideIndex = 3;
 var x = [];
 var runningSum = [];
-var direction;
+var direction = 1;
 
 function plusDivs(n) {
   direction = n;
