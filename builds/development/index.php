@@ -7,7 +7,7 @@
 <?php echo show_overlay(); ?>
 
     <div id="sliderwrapper">
-        <ul id="slidercontainer">
+        <ul id="slidercontainer" ontouchstart="touchStart(event,'slidercontainer');" ontouchend="touchEnd(event);" ontouchmove="touchMove(event);" ontouchcancel="touchCancel(event);">
             <li><img class="photos" src="images/Workspace.jpg"></li>
             <li><img class="photos" src="images/Figues.png"></li>
             <li><img class="photos" src="images/strawberrycocktail.jpg"></li>
