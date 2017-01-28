@@ -8,29 +8,30 @@
     transform: translate(0%,-50%);
     width: 30px;
     height: 100%;
-    line-height: 2000%;
-    display: inline-block;
+    display: table;
     text-align: center;
-    //color: $darkgrey;
     color: $lightgrey;
-    //background-color: $lightgrey;
     background-color: $darkgrey;
     overflow: hidden;
     z-index: 1;
     padding: 0;
-    //border-radius: 30%;
     cursor: pointer;
     font-size: 24px;
     opacity: 0.75;
+}
+#scrollleft div,
+#scrollright div {
+    display: table-cell;
+    vertical-align: middle;
 }
 #scrollleft:hover,
 #scrollright:hover,
 #imgPanel #scrollleft:hover,
 #imgPanel #scrollright:hover  {
-    //color: $lightgrey;
-    color: $darkgrey;
-    //background-color: $darkgrey;
-    background-color: $lightgrey;
+    @include bp(desktop) {
+        color: $darkgrey;
+        background-color: $lightgrey;
+    }
 }
 #scrollleft {
     left: 0%;
@@ -45,8 +46,16 @@
                 display: initial;
                 max-height:100%;
                 opacity:0.4;
-                @include respond-to(xlarge) {
+                @include bp(desktop) {
                     height: 100%;
+                }
+                @include bp(phone-portrait) {
+                    max-height: none;
+                    max-width: 100%;
+                }
+                @include bp(tablet-portrait) {
+                    max-height: none;
+                    max-width: 100%;
                 }
             }
             display:inline;
@@ -61,6 +70,12 @@
     }
     position: relative;
     height:70%;
+    /*@include bp(phone-portrait) {
+
+    }
+    @include bp(tablet-portrait) {
+
+    }*/
 }
 .notransition * {
   -webkit-transition: none !important;

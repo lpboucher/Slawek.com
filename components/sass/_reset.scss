@@ -18,7 +18,7 @@ time, mark, audio, video, input {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
-	@include respond-to(xlarge) {
+	@include bp(desktop) {
 		font-size: 105%;
 	}
 }

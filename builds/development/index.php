@@ -7,17 +7,16 @@
 <?php echo show_overlay(); ?>
 
     <div id="sliderwrapper">
-        <ul id="slidercontainer" ontouchstart="touchStart(event,'slidercontainer');" ontouchend="touchEnd(event);" ontouchmove="touchMove(event);" ontouchcancel="touchCancel(event);">
-            <li><img class="photos" src="images/Workspace.jpg"></li>
-            <li><img class="photos" src="images/Figues.png"></li>
-            <li><img class="photos" src="images/strawberrycocktail.jpg"></li>
-            <li><img class="photos" src="images/afternoontea.jpg"></li>
-            <li><img class="photos" src="images/kwestsuite.jpg"></li>
-            <li><img class="photos" src="images/lifestyle.jpg"></li>
-            <li><img class="photos" src="images/raspberrycocktail.jpg"></li>
-        </ul>
-        <a id="scrollleft" onclick="plusDivs(-1)">&#10094;</a>
-        <a id="scrollright" onclick="plusDivs(1)">&#10095;</a>
+        <?php echo show_slider(); ?>
     </div>
 
 <?php echo show_footer(); ?>
+
+<div id="mobilefooter">
+    <div class="box left">
+        <a href="#">Instagram</a>
+    </div>
+    <div class="box right">
+        <a href="#">Contact Us</a>
+    </div>
+</div>

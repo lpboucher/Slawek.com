@@ -13,7 +13,7 @@
             display:inline;
         }
         font-size: 0;
-        margin: 0 45%;
+        margin: 1.5% 45% 0 45%;
     }
     #velodesign {
         color: $lightgrey;
@@ -21,6 +21,42 @@
         font-size: 0.7em;
         margin: 1.5% 0 0 0;
     }
-    margin: 1.5% 0 0 0;
+    margin: 0;
     height: 9%;
+}
+#mobilefooter {
+    .box {
+        a {
+            text-decoration: none;
+            display: block;
+        }
+        border-style: solid;
+        border-width: 3px;
+        padding: 2.5% 0;
+    }
+    .left {
+        a {
+            color: $darkgrey;
+        }
+        border-color: $darkgrey;
+        background-color: $lightgrey;
+    }
+    .right {
+        a {
+            color: $lightgrey;
+        }
+        border-color: $darkgrey;
+        background-color: $darkgrey;
+    }
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    column-count: 2;
+    column-gap: 0px;
+    -webkit-column-count: 2;
+    -webkit-column-gap: 0px;
+    -moz-column-count: 2;
+    -moz-column-gap: 0px;
 }

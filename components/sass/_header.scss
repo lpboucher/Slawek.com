@@ -3,7 +3,7 @@
 
 #myTopnav {
     text-align:center;
-    padding: 1% 0;
+    padding: 1% 0 0 0;
 }
 
 .topmenu {
@@ -82,4 +82,61 @@
     width: 100%;
     padding: 2% 0 0 0;
     height: 15%;
+}
+
+// Mobile Menu ==============
+.show-menu {
+	text-decoration: none;
+	color: #fff;
+	background: #19c589;
+	text-align: center;
+	padding: 20px 0;
+	display: none;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+}
+
+input[type=checkbox] {
+    width: 0%;
+}
+
+input[type=checkbox]:checked ~ #mobilemenu,
+input[type=checkbox]:checked ~ #mobilemenu ul {
+    li, li a {
+        display: block;
+    }
+    width: 100%;
+
+}
+
+#mobilemenu {
+	display: block;
+    position: fixed;
+    text-align: center;
+    z-index: 2;
+    width: 0%;
+    height: 100%;
+    pointer-events: none;
+    -webkit-transition-property: width; /* Safari */
+    background-color: $darkgrey;
+    -webkit-transition-duration: 1s; /* Safari */
+    transition-duration: 1s;
+}
+
+/*Make all menu links full width*/
+#mobilemenu ul li, #mobilemenu ul li a {
+	display: none;
+    pointer-events: auto;
+    width: 100%;
+}
+#mobilemenu ul li a {
+    text-decoration: none;
+    color: $lightgrey;
+    padding: 1% 0;
+}
+/*Display 'show menu' link*/
+.show-menu {
+	display:block;
+    content: "\203A";
 }

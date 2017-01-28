@@ -30,6 +30,15 @@ function show_navigation() {
     $nav .= "<li><a href=\"#projects\">Projects</a></li>";
     $nav .= "<li><a href=\"javascript:void(0)\" onclick=\"openAbout()\">About</a></li>";
     $nav .= "<li><a href=\"javascript:void(0)\" onclick=\"openContact()\">Contact</a></li>";
+    $nav .= "</ul></div>";
+    $nav .= "<label for=\"show-menu\" class=\"show-menu\"></label>";
+    $nav .= "<input type=\"checkbox\" id=\"show-menu\" role=\"button\">";
+    $nav .= "<div id=\"mobilemenu\">";
+    $nav .= "<ul id=\"mobilemenu\">";
+    $nav .= "<li><a href=\"#\">Gallery</a></li>";
+    $nav .= "<li><a href=\"#\">Projects</a></li>";
+    $nav .= "<li><a href=\"#\">About</a></li>";
+    $nav .= "<li><a href=\"#\">Contact</a></li>";
     $nav .= "</ul></div></div>";
 
     return $nav;

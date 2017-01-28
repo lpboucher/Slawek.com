@@ -32,4 +32,23 @@ function show_gallery($current_gallery) {
 
     return $output;
 }
+
+function show_slider() {
+    $path = "images/slider/*.jpg";
+    $output = "";
+
+    $output .= "<ul id=\"slidercontainer\" ontouchstart=\"touchStart(event,'slidercontainer');\" ontouchend=\"touchEnd(event);\" ontouchmove=\"touchMove(event);\" ontouchcancel=\"touchCancel(event);\">";
+    foreach (glob($path) as $filename) {
+        $output .= "<li><img class=\"photos\" src=\"{$filename}\"></li>";
+    }
+    $output .= "</ul>";
+    $output .= "<div id=\"scrollleft\" onclick=\"plusDivs(-1)\">";
+    $output .= "<div>&#10094;</div>";
+    $output .= "</div>";
+    $output .= "<div id=\"scrollright\" onclick=\"plusDivs(1)\">";
+    $output .= "<div>&#10095;</div>";
+    $output .= "</div>";
+
+    return $output;
+}
  ?>
