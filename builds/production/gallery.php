@@ -2,7 +2,7 @@
 <?php include("layouts.php"); ?>
 
 <?php echo show_header("gallery"); ?>
-<?php echo show_navigation(); ?>
+<?php echo show_navigation("gallery"); ?>
 
 <?php echo show_overlay(); ?>
 

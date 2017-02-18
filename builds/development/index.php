@@ -4,7 +4,7 @@
 <?php
 if(isset($_POST['submit'])) {
     // EDIT THE 2 LINES BELOW AS REQUIRED
-    $email_to = "lp_boucher@hotmail.com";
+    $email_to = "contact@viewfinder.photo";
     $email_subject = "Website Contact Request";
 
     $full_name = $_POST['full_name']; // required
@@ -29,7 +29,7 @@ if(isset($_POST['submit'])) {
     }
 }
 ?>
-<?php echo message(); ?>
+<?php //echo message(); ?>
 <?php echo show_header("index"); ?>
 <?php echo show_navigation("index"); ?>
 

@@ -51,4 +51,16 @@ function show_slider() {
 
     return $output;
 }
+
+function read_about() {
+    $file = file_get_contents("images/about/about.txt");
+
+    return nl2br($file);
+}
+
+function clean_string($string) {
+  $bad = array("content-type","bcc:","to:","cc:","href");
+  return str_replace($bad,"",$string);
+}
+
  ?>
