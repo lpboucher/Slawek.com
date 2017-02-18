@@ -30,10 +30,25 @@
         margin: 0 1%;
         text-transform: uppercase;
         position: relative;
+        font-size: 80%;
     }
     list-style-type: none;
 }
-
+#menuwrapper {
+    display: block;
+    @include bp(phone-portrait) {
+        display: none;
+    }
+    @include bp(phone-landscape) {
+        display: none;
+    }
+    @include bp(tablet-portrait) {
+        display: none;
+    }
+    @include bp(tablet-landscape) {
+        display: none;
+    }
+}
 .topmenu li:hover {
         .dropdown {
         display: block;
@@ -69,36 +84,100 @@
 
 .headerwrapper{
     h1 {
+        a{
+            color: $lightgrey;
+            text-decoration: none;
+        }
         text-align: center;
-		font-size: 150%;
+		font-size: 140%;
         color: $lightgrey;
+        @include bp(phone-portrait) {
+        //text-align: left;
+        font-size: 140%;
+        }
     }
     h2 {
         text-align: center;
         color: $lightgrey;
         font-size: 0.9em;
         padding-top: 0.5%;
+        @include bp(phone-portrait) {
+            //text-align: left;
+        }
     }
     width: 100%;
     padding: 2% 0 0 0;
     height: 15%;
+    @include bp(phone-portrait) {
+        padding: 18% 0 0 0;
+        height: 12.5%;
+    }
+    @include bp(tablet-portrait) {
+        padding: 7.5% 0 0 0;
+        height: 7.5%;
+        //position: fixed;
+        //z-index: 4;
+        //background-color:$darkgrey;
+    }
+    @include bp(tablet-landscape) {
+        height: 10%;
+    }
 }
 
+.headerwrapper.gallery {
+    @include bp(phone-portrait) {
+        height: 6.5%;
+        padding: 4% 0 2% 0;
+        position: fixed;
+        z-index: 4;
+        background-color:$darkgrey;
+        font-size: 80%;
+    }
+    @include bp(phone-landscape) {
+        position: fixed;
+        z-index: 4;
+        background-color:$darkgrey;
+    }
+    @include bp(tablet-portrait) {
+        height: 5%;
+        padding: 2.5% 0 0 0;
+        position: fixed;
+        z-index: 4;
+        background-color:$darkgrey;
+    }
+}
 // Mobile Menu ==============
 .show-menu {
 	text-decoration: none;
-	color: #fff;
-	background: #19c589;
-	text-align: center;
-	padding: 20px 0;
+	padding: 10px 0;
 	display: none;
     width: 100%;
     position: fixed;
-    z-index: 1;
+    text-align: right;
+    color: $lightgrey;
+    padding-right: 10px;
+    top: 0;
+    z-index: 2;
+    @include bp(phone-portrait) {
+        display: block;
+        font-size: 2em;
+    }
+    @include bp(phone-landscape) {
+        display: block;
+        font-size: 2em;
+    }
+    @include bp(tablet-portrait) {
+        display: block;
+        font-size: 3em;
+    }
+    @include bp(tablet-landscape) {
+        display: block;
+        font-size: 3em;
+    }
 }
 
 input[type=checkbox] {
-    width: 0%;
+    display: none
 }
 
 input[type=checkbox]:checked ~ #mobilemenu,
@@ -107,11 +186,11 @@ input[type=checkbox]:checked ~ #mobilemenu ul {
         display: block;
     }
     width: 100%;
-
+    background-color: $darkgrey;
 }
 
 #mobilemenu {
-	display: block;
+	display: none;
     position: fixed;
     text-align: center;
     z-index: 2;
@@ -122,6 +201,20 @@ input[type=checkbox]:checked ~ #mobilemenu ul {
     background-color: $darkgrey;
     -webkit-transition-duration: 1s; /* Safari */
     transition-duration: 1s;
+    //margin-top: 30px;
+    @include bp(phone-portrait) {
+        display: block;
+    }
+    @include bp(phone-landscape) {
+        display: block;
+        margin-top: 0px;
+    }
+    @include bp(tablet-portrait) {
+        display: block;
+    }
+    @include bp(tablet-landscape) {
+        display: block;
+    }
 }
 
 /*Make all menu links full width*/
@@ -133,10 +226,15 @@ input[type=checkbox]:checked ~ #mobilemenu ul {
 #mobilemenu ul li a {
     text-decoration: none;
     color: $lightgrey;
-    padding: 1% 0;
-}
-/*Display 'show menu' link*/
-.show-menu {
-	display:block;
-    content: "\203A";
+    padding: 7% 0;
+    font-size: 2em;
+    @include bp(tablet-landscape) {
+        padding: 5% 0;
+    }
+    @include bp(phone-landscape) {
+        padding: 2% 0;
+    }
+    @include bp(phone-portrait) {
+        padding: 10% 0;
+    }
 }

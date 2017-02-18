@@ -44,7 +44,7 @@ document.getElementById("slidercontainer").addEventListener('transitionend',func
             setTimeout(function() {
                 document.body.className = "";
             }, 100);
-        }; 
+        };
         if (slideIndex < 2 && direction == -1) {
             slideIndex = x.length - 1;
             document.body.className += "notransition";

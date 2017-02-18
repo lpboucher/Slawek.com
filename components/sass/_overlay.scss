@@ -38,6 +38,22 @@ body.modal-open {
     text-decoration: none;
     transition: 0.3s;
     z-index: 10;
+    @include bp(phone-portrait) {
+        top: 60px;
+        right: 5px;
+    }
+    @include bp(phone-landscape) {
+        top: 25px;
+        right: 5px;
+    }
+    @include bp(tablet-portrait) {
+        top: 50px;
+        right: 5px;
+    }
+    @include bp(tablet-landscape) {
+        top: 50px;
+        right: 20px;
+    }
 }
 
 //Form style
@@ -50,12 +66,32 @@ body.modal-open {
     padding: 30px;
     background: $white;
     margin: 10% auto;
+    font-size: 70%;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
     -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
     -webkit-box-shadow:  0px 0px 15px rgba(0, 0, 0, 0.22);
     @include bp(desktop) {
-        height: 30%;
+        height: 40%;
         width: 600px;
+    }
+    @include bp(phone-portrait) {
+        height: 100%;
+        width: 100%;
+        margin: 10% auto 0 auto;
+        padding: 0;
+    }
+    @include bp(phone-landscape) {
+        height: 100%;
+        width: 100%;
+        margin: 0 auto;
+    }
+    @include bp(tablet-landscape) {
+        width: 600px;
+    }
+    @include bp(tablet-portrait) {
+        height: 100%;
+        width: 100%;
+        margin: 0 auto;
     }
 }
 .overlay-content h3{
@@ -67,17 +103,53 @@ body.modal-open {
     font-weight: 100;
     padding: 20px;
     margin: -30px -30px 30px -30px;
+    @include bp(phone-portrait) {
+        background: $darkgrey;
+        margin-bottom: 90px;
+    }
+    @include bp(phone-landscape) {
+        background: $darkgrey;
+        padding: 12.5px 20px 10px 20px;
+    }
+    @include bp(tablet-portrait) {
+        background: $darkgrey;
+        //padding: 12.5px 20px 10px 20px;
+    }
 }
 .overlay-content #contact-content {
     div {
         float: left;
         width: 50%;
+        @include bp(phone-portrait) {
+            width: 90%;
+            padding: 10% 15% 25% 5%;
+        }
+        @include bp(phone-landscape) {
+            width: 100%;
+        }
+        @include bp(tablet-portrait) {
+            width: 90%;
+            padding: 10% 15% 0 1%;
+        }
     }
     .contact-info {
         text-align: center;
         padding: 10% 0;
         line-height: 1.5em;
         color: $darkgrey;
+        @include bp(phone-portrait) {
+            //padding: 30% 0 0 0;
+            display: none;
+        }
+        @include bp(phone-landscape) {
+            //padding: 30% 0 0 0;
+            display: none;
+        }
+        @include bp(tablet-portrait) {
+            width: 100%;
+            font-size: 1.3em;
+            padding-top: 15%;
+        }
     }
 }
 
@@ -118,11 +190,18 @@ body.modal-open {
     padding: 8px 18px;
     text-decoration: none;
     text-transform: uppercase;
+    @include bp(phone-portrait) {
+        background-color:black;
+    }
 }
 .overlay-content div input[type="button"]:hover,
 .overlay-content div input[type="submit"]:hover {
     background:linear-gradient(to bottom, $pink 5%, lighten($pink, 15%) 100%);
     background-color:$pink;
+    @include bp(phone-portrait) {
+        background:linear-gradient(to bottom, $pink 5%, lighten($pink, 30%) 100%);
+        background-color:$pink;
+    }
 }
 /* About Section style */
 #about-content {
@@ -133,31 +212,66 @@ body.modal-open {
                 @include bp(desktop) {
                     width: 100%;
                 }
+                @include bp(tablet-portrait) {
+                    height: 100%;
+                    max-width: none;
+                    margin-left: -30%;
+                }
             }
             float:left;
             position:relative;
             overflow:hidden;
             width:50%;
+            @include bp(phone-portrait) {
+                width: 0%;
+            }
+            @include bp(phone-landscape) {
+                width: 0%;
+            }
+            @include bp(tablet-landscape) {
+                width: 50%;
+            }
         }
         .about-right{
             .about-text {
                 color:$lightgrey;
-                font-size: 1.2em;
-                line-height: 1.4em;
-                padding-left: 20%;
-                padding-right: 20%;
+                font-size: 0.75em;
+                line-height: 1.2em;
+                padding-left: 10%;
+                padding-right: 10%;
+                @include bp(phone-landscape) {
+                    padding-left: 3%;
+                    padding-right: 3%;
+                }
+                @include bp(tablet-portrait) {
+                    padding-left: 5%;
+                    padding-right: 5%;
+                    line-height: 1.5em;
+                }
             }
             hr {
                 width:35%
             }
             h4 {
-                padding-top: 30%;
+                padding-top: 9%;
                 //padding-bottom: 2.5%;
                 text-align: center;
+                @include bp(phone-portrait) {
+                    padding-top: 25%;
+                }
+                @include bp(phone-landscape) {
+                    padding-top: 5%;
+                }
+                @include bp(tablet-portrait) {
+                    padding-top: 40%;
+                }
+                @include bp(tablet-landscape) {
+                    padding-top: 15%;
+                }
             }
             p{
                 padding-bottom: 30%;
-                padding-top: 2.5%;
+                padding-top: 2%;
                 text-align: justify;
             }
             float:left;
@@ -165,6 +279,20 @@ body.modal-open {
             overflow:hidden;
             width:50%;
             height:100%;
+            @include bp(phone-portrait) {
+                width: 100%;
+            }
+            @include bp(phone-landscape) {
+                width: 100%;
+                font-size: 0.5em;
+            }
+            @include bp(tablet-portrait) {
+                font-size: 1.15em;
+            }
+            @include bp(tablet-landscape) {
+                width: 50%;
+                font-size: 1.25em;
+            }
         }
         float:left;
         width:100%;
@@ -177,13 +305,4 @@ body.modal-open {
     width:100%;
     height:100%;
     overflow:hidden;
-}
-/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
-@media screen and (max-height: 450px) {
-    #overlay a {font-size: 20px}
-    #overlay .closebtn {
-        font-size: 40px;
-        top: 15px;
-        right: 35px;
-    }
 }

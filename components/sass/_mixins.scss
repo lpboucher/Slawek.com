@@ -3,31 +3,31 @@
 /// Mixin to manage responsive breakpoints
 @mixin bp($breakpoint) {
   @if $breakpoint == "phone-portrait" {
-    @media (min-device-width: 0px) and (max-device-width: 450px) and (orientation: portrait) {
+    @media only screen and (min-device-width: 0px) and (max-device-width: 450px) and (orientation: portrait) {
       @content;
     }
   }
 
   @else if $breakpoint == "phone-landscape" {
-    @media (min-device-width: 450px) and (max-device-width: 736px) and (orientation: landscape) {
+    @media only screen and (min-device-width: 375px) and (max-device-width: 736px) and (orientation: landscape) {
       @content;
     }
   }
 
   @else if $breakpoint == "tablet-portrait" {
-    @media (min-device-width: 600px) and (max-device-width: 1200px) and (orientation: portrait) {
+    @media only screen and (min-device-width: 600px) and (max-device-width: 1200px) and (orientation: portrait) {
       @content;
     }
   }
 
   @else if $breakpoint == "tablet-landscape" {
-    @media (min-device-width: 906px) and (max-device-width: 1600px) and (orientation: landscape) {
+    @media only screen and (min-device-width: 736px) and (max-device-width: 1200px) and (orientation: landscape) {
       @content;
     }
   }
 
   @else if $breakpoint == "desktop" {
-    @media (min-device-width: 1200px) {
+    @media only screen and (min-device-width: 1200px) {
       @content;
     }
   }

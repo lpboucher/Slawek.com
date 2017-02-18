@@ -5,4 +5,8 @@
 body {
     background-color: $darkgrey;
     overflow-x: hidden;
+    @include bp(phone-portrait) {
+        font-size: 100%;
+        overflow-x: hidden;
+    }
 }

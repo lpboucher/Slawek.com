@@ -6,11 +6,6 @@ var direction = 1;
 function plusDivs(n) {
   direction = n;
   showDivs(slideIndex += n);
-  /*if (n > 0) {
-      direction = "forward";
-  } else if (n < 0) {
-      direction = "backward";
-  }*/
 }
 function showDivs(n) {
   x = Array.from(x);
@@ -18,10 +13,21 @@ function showDivs(n) {
   var body = document.getElementsByTagName("body");
   var moveBy = 0;
   var slider = document.getElementById("slidercontainer");
+  var effectiveWidth;
   for (i = 0; i < x.length; i++) {
      x[i].style.opacity = 0.4;
   }
-  moveBy = runningSum[slideIndex-1] - (screen.availWidth - x[slideIndex-1].width) / 2;
+  switch(window.orientation)
+    {
+      case -90:
+      case 90:
+        effectiveWidth = screen.height;
+        break;
+      default:
+        effectiveWidth = screen.width;
+        break;
+    }
+  moveBy = runningSum[slideIndex-1] - (effectiveWidth - x[slideIndex-1].width) / 2;
   slider.style.transform = "translate(" + - moveBy + "px)";
   x[slideIndex-1].style.opacity = 1;
 }
@@ -40,8 +46,10 @@ function createNode(location, images) {
     newNode.appendChild(newImg);
     if (location == "early") {
         newImg.src = images[images.length - 1].src;
+        newImg.width = images[images.length - 1].width
     } else if (location == "late") {
         newImg.src = images[0].src;
+        newImg.width = images[0].width
     }
     return newNode;
 }
@@ -53,4 +61,12 @@ function getWidths() {
         sumWidth = runningSum[i] + x[i].width;
         runningSum.push(sumWidth);
     }
+}
+function effectiveDeviceWidth() {
+    var deviceWidth = window.orientation == 0 ? window.screen.width : window.screen.height;
+    // iOS returns available pixels, Android returns pixels / pixel ratio
+    if (navigator.userAgent.indexOf('Android') >= 0 && window.devicePixelRatio) {
+        deviceWidth = deviceWidth / window.devicePixelRatio;
+    }
+    return deviceWidth;
 }

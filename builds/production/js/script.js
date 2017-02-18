@@ -44,7 +44,7 @@ document.getElementById("slidercontainer").addEventListener('transitionend',func
             setTimeout(function() {
                 document.body.className = "";
             }, 100);
-        };
+        }; 
         if (slideIndex < 2 && direction == -1) {
             slideIndex = x.length - 1;
             document.body.className += "notransition";
@@ -71,22 +71,11 @@ function openAbout() {
 }
 /* Adjust text area in contact form automatically */
 function adjust_textarea(h) {
-    var box = document.getElementById("contact-content");
-    var totalHeight = screen.height;
-    var factor = 0.4;
-    //if (window.orientation == "undefined") {
-    //    box.style.height = (factor * totalHeight)+"px";
-    //    box.style.height = (box.scrollHeight)+"px";
-    //}
     h.style.height = "20px";
     h.style.height = (h.scrollHeight)+"px";
 }
 /* Open */
 function openModal() {
-    var input = document.getElementById("show-menu");
-    var mobile = document.getElementById("mobilemenu");
-    var nodes = document.getElementsByClassName("mobileonly");
-    input.checked = false;
     document.getElementById("overlay").style.height = "100%";
     document.body.className+='modal-open';
     document.getElementById("scrollleft").style.display = "none";
@@ -94,20 +83,10 @@ function openModal() {
 }
 /* Close */
 function closeModal() {
-    var input = document.getElementById("show-menu");
-    var mobile = document.getElementById("mobilemenu");
-    var nodes = document.getElementsByClassName("mobileonly");
-    input.checked = false;
     document.getElementById("overlay").style.height = "0%";
     document.body.classList.remove('modal-open');
-    if (screen.width >= 1200) {
-        document.getElementById("scrollleft").style.display = "table";
-        document.getElementById("scrollright").style.display = "table";
-    }
-}
-
-function checkBox() {
-    var input = input = document.getElementById("show-menu");
+    document.getElementById("scrollleft").style.display = "inline-block";
+    document.getElementById("scrollright").style.display = "inline-block";
 }
 
 var slideIndex = 3;
@@ -125,21 +104,10 @@ function showDivs(n) {
   var body = document.getElementsByTagName("body");
   var moveBy = 0;
   var slider = document.getElementById("slidercontainer");
-  var effectiveWidth;
   for (i = 0; i < x.length; i++) {
      x[i].style.opacity = 0.4;
   }
-  switch(window.orientation)
-    {
-      case -90:
-      case 90:
-        effectiveWidth = screen.height;
-        break;
-      default:
-        effectiveWidth = screen.width;
-        break;
-    }
-  moveBy = runningSum[slideIndex-1] - (effectiveWidth - x[slideIndex-1].width) / 2;
+  moveBy = runningSum[slideIndex-1] - (screen.availWidth - x[slideIndex-1].width) / 2;
   slider.style.transform = "translate(" + - moveBy + "px)";
   x[slideIndex-1].style.opacity = 1;
 }
@@ -158,10 +126,8 @@ function createNode(location, images) {
     newNode.appendChild(newImg);
     if (location == "early") {
         newImg.src = images[images.length - 1].src;
-        newImg.width = images[images.length - 1].width
     } else if (location == "late") {
         newImg.src = images[0].src;
-        newImg.width = images[0].width
     }
     return newNode;
 }
@@ -173,14 +139,6 @@ function getWidths() {
         sumWidth = runningSum[i] + x[i].width;
         runningSum.push(sumWidth);
     }
-}
-function effectiveDeviceWidth() {
-    var deviceWidth = window.orientation == 0 ? window.screen.width : window.screen.height;
-    // iOS returns available pixels, Android returns pixels / pixel ratio
-    if (navigator.userAgent.indexOf('Android') >= 0 && window.devicePixelRatio) {
-        deviceWidth = deviceWidth / window.devicePixelRatio;
-    }
-    return deviceWidth;
 }
 
 var triggerElementID = null; // this variable is used to identity the triggering element

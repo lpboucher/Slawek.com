@@ -14,6 +14,15 @@
         }
         font-size: 0;
         margin: 1.5% 45% 0 45%;
+        @include bp(phone-portrait) {
+            margin: 1.5% 30% 0 30%;
+        }
+        @include bp(phone-landscape) {
+            margin: 1.5% 30% 0 30%;
+        }
+        @include bp(tablet-portrait) {
+            margin: 4% 40% 0 40%;
+        }
     }
     #velodesign {
         color: $lightgrey;
@@ -29,10 +38,17 @@
         a {
             text-decoration: none;
             display: block;
+            font-size: 1.25em;
         }
         border-style: solid;
-        border-width: 3px;
-        padding: 2.5% 0;
+        border-width: 4px;
+        padding: 5% 0;
+        @include bp(phone-landscape) {
+            padding: 4% 0;
+        }
+        @include bp(tablet-portrait) {
+            padding: 5% 0;
+        }
     }
     .left {
         a {
@@ -59,4 +75,14 @@
     -webkit-column-gap: 0px;
     -moz-column-count: 2;
     -moz-column-gap: 0px;
+    display: none;
+    @include bp(phone-portrait) {
+        display: block;
+    }
+    @include bp(phone-landscape) {
+        display: block;
+    }
+    @include bp(tablet-portrait) {
+        display: block;
+    }
 }

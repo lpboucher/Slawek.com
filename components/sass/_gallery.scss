@@ -82,6 +82,7 @@
     -moz-column-count: 3;
     -moz-column-gap: 0px;
     @include bp(phone-portrait) {
+        margin-top: 12.5%;
         column-count: 1;
         column-gap: 0px;
         -webkit-column-count: 1;
@@ -90,6 +91,7 @@
         -moz-column-gap: 0px;
     }
     @include bp(phone-landscape) {
+        margin-top: 12.5%;
         column-count: 1;
         column-gap: 0px;
         -webkit-column-count: 1;
@@ -97,16 +99,26 @@
         -moz-column-count:1;
         -moz-column-gap: 0px;
     }
+    @include bp(tablet-portrait) {
+        margin-top: 7.5%;
+    }
 }
 .gallerycontainer div:hover {
     p {
         display: block;
+        @include bp(phone-portrait) {
+
+        }
     }
     img {
         opacity: 0.7;
+        @include bp(phone-portrait) {
+
+        }
     }
     background-color:white;
     cursor: pointer;
+
 }
 
 #loading {

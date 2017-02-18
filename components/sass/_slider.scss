@@ -18,6 +18,18 @@
     cursor: pointer;
     font-size: 24px;
     opacity: 0.75;
+    @include bp(phone-portrait) {
+        background-color:transparent;
+    }
+    @include bp(phone-landscape) {
+        background-color:transparent;
+    }
+    @include bp(tablet-portrait) {
+        background-color:transparent;
+    }
+    @include bp(tablet-landscape) {
+        background-color:transparent;
+    }
 }
 #scrollleft div,
 #scrollright div {
@@ -45,17 +57,13 @@
             .photos {
                 display: initial;
                 max-height:100%;
+                //max-width: auto;
                 opacity:0.4;
-                @include bp(desktop) {
-                    height: 100%;
-                }
                 @include bp(phone-portrait) {
-                    max-height: none;
-                    max-width: 100%;
+                    width: 375px;
                 }
-                @include bp(tablet-portrait) {
-                    max-height: none;
-                    max-width: 100%;
+                @include bp(phone-landscape) {
+                    width: 375px;
                 }
             }
             display:inline;
@@ -67,15 +75,23 @@
         white-space: nowrap;
         overflow-x: hidden;
         height:100%;
+        @include bp(phone-portrait) {
+            transform: translate(187.5px);
+            //padding-top: 10%;
+        }
+        @include bp(phone-landscape) {
+            transform: translate(187.5px);
+        }
     }
     position: relative;
     height:70%;
-    /*@include bp(phone-portrait) {
-
+    width:100%;
+    @include bp(phone-portrait) {
+        height:52%;
     }
     @include bp(tablet-portrait) {
 
-    }*/
+    }
 }
 .notransition * {
   -webkit-transition: none !important;

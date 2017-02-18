@@ -24,6 +24,7 @@ time, mark, audio, video, input {
 }
 html, body {
 	height: 100%;
+	overflow-x: hidden;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,

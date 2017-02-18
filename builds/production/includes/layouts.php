@@ -12,21 +12,14 @@ function show_header($page) {
     $output .= "<script>try{Typekit.load({ async: true });}catch(e){}</script>";
     $output .= "</head>";
     $output .= "<body id=\"{$page}\">";
-    $output .= "<div class=\"headerwrapper {$page}\">";
-    $output .= "<h1><a href=\"index.php\">VIEWFINDER PHOTOGRAPHY</a></h1>";
+    $output .= "<div class=\"headerwrapper\">";
+    $output .= "<h1>VIEWFINDER PHOTOGRAPHY</h1>";
     $output .= "<h2>Slawek Tomas</h2>";
 
     return $output;
 }
 
-function show_navigation($page) {
-    if ($page == "index") {
-        $menu_top_link = "gallery.php";
-        $menu_label = "Gallery";
-    } else if ($page == "gallery") {
-        $menu_top_link = "index.php";
-        $menu_label = "Home";
-    }
+function show_navigation() {
     $nav = "<div id=\"menuwrapper\">";
     $nav .= "<ul class=\"topmenu\" id=\"myTopnav\">";
     $nav .= "<li><a href=\"gallery.php\">Gallery</a>";
@@ -39,14 +32,14 @@ function show_navigation($page) {
     $nav .= "<li><a href=\"javascript:void(0)\" onclick=\"openAbout()\">About</a></li>";
     $nav .= "<li><a href=\"javascript:void(0)\" onclick=\"openContact()\">Contact</a></li>";
     $nav .= "</ul></div>";
-    $nav .= "<label for=\"show-menu\" class=\"show-menu {$page}\">&#9776</label>";
+    $nav .= "<label for=\"show-menu\" class=\"show-menu\">&#9776</label>";
     $nav .= "<input type=\"checkbox\" id=\"show-menu\" role=\"button\">";
     $nav .= "<div id=\"mobilemenu\">";
     $nav .= "<ul>";
-    $nav .= "<li class=\"mobileonly\"><a class=\"mobileonly\" href=\"{$menu_top_link}\">{$menu_label}</a></li>";
-    $nav .= "<li class=\"mobileonly\"><a class=\"mobileonly\" href=\"#projects\">Projects</a></li>";
-    $nav .= "<li class=\"mobileonly\"><a class=\"mobileonly\" href=\"javascript:void(0)\" onclick=\"openAbout()\">About</a></li>";
-    $nav .= "<li class=\"mobileonly\"><a class=\"mobileonly\" href=\"javascript:void(0)\" onclick=\"openContact()\">Contact</a></li>";
+    $nav .= "<li><a href=\"gallery.php\">Gallery</a></li>";
+    $nav .= "<li><a href=\"#projects\">Projects</a></li>";
+    $nav .= "<li><a href=\"javascript:void(0)\" onclick=\"openAbout()\">About</a></li>";
+    $nav .= "<li><a href=\"javascript:void(0)\" onclick=\"openContact()\">Contact</a></li>";
     $nav .= "</ul></div></div>";
 
     return $nav;
@@ -60,12 +53,12 @@ function show_overlay() {
     $output .= "<div class=\"overlay-content\">";
     $output .= "<div id=\"contact-content\">";
     $output .= "<h3>Contact</h3>";
-    $output .= "<form name=\"contactform\" method=\"post\" action=\"\">";
+    $output .= "<form>";
     $output .= "<div>";
-    $output .= "<input type=\"text\" name=\"full_name\" placeholder=\"Full Name\" />";
-    $output .= "<input type=\"email\" name=\"email\" placeholder=\"Email\" />";
-    $output .= "<textarea name=\"email_text\" placeholder=\"Message\" onkeyup=\"adjust_textarea(this)\"></textarea>";
-    $output .= "<input type=\"Submit\" name=\"submit\" value=\"Send Message\" />";
+    $output .= "<input type=\"text\" name=\"field1\" placeholder=\"Full Name\" />";
+    $output .= "<input type=\"email\" name=\"field2\" placeholder=\"Email\" />";
+    $output .= "<textarea placeholder=\"Message\" onkeyup=\"adjust_textarea(this)\"></textarea>";
+    $output .= "<input type=\"button\" value=\"Send Message\" />";
     $output .= "</div>";
     $output .= "<p class=\"contact-info\">";
     $output .= "Slawek Tomas</br>";
@@ -83,9 +76,10 @@ function show_overlay() {
     $output .= "<div class=\"about-right\">";
     $output .= "<h4 class=\"about-text\">BEHIND THE LENS</h4>";
     $output .= "<hr>";
-    $output .= "<p class=\"about-text\">";
-    $output .= read_about();
-    $output .= "</p>";
+    $output .= "<p class=\"about-text\">I got my first digital camera back in 2008 mostly to take holiday snaps. Photography had been a part time hobby for me then, but nothing more than that. I started to experiment with different types of photography and I was quite keen on night and long exposure photography.</br></br>
+In 2013, I have upgraded to a DSLR before my son was born, so that I could take good quality photos of him. Soon after that, I began to delve deeper into photography. I started to learn about the technical side of photography, shutter speed, aperture, composition and most importantly lighting. Countless hours spent taking photos, looking at images and portfolios plus retouching my own photos made me realise that photography has become much more than a hobby for me.</br></br>
+Since then, I have developed my skills further in a professional setting by working for clients on various photo shoots. I mainly specialise in food and beverage photography and that is what I’m most passionate about.<br></br>
+I’m currently based in London, UK.</p>";
     $output .= "</div></div></div></div></div>";
 
     return $output;
@@ -94,17 +88,17 @@ function show_overlay() {
 function show_footer() {
     $output = "<div id=\"footerwrapper\">";
     $output .= "<ul id=\"socialcontainer\">";
-    $output .= "<li><a href=\"https://www.facebook.com/slawektomasphoto\" target=\"_blank\"><img class =\"social\" src=\"images/socialicons/fb.png\" width=\"32px\"></a></li>";
-    $output .= "<li><a href=\"https://www.flickr.com/photos/slawektomas\" target=\"_blank\"><img class =\"social\" src=\"images/socialicons/flickr.png\" width=\"32px\"></a></li>";
-    $output .= "<li><a href=\"https://www.instagram.com/slawek.tomas/?hl=en\" target=\"_blank\"><img class =\"social\" src=\"images/socialicons/instagram.png\" width=\"32px\"></a></li>";
+    $output .= "<li><img class =\"social\" src=\"images/socialicons/fb.png\" width=\"32px\"></li>";
+    $output .= "<li><img class =\"social\" src=\"images/socialicons/flickr.png\" width=\"32px\"></li>";
+    $output .= "<li><img class =\"social\" src=\"images/socialicons/instagram.png\" width=\"32px\"></li>";
     $output .= "</ul>";
     $output .= "<p id=\"velodesign\">Designed by: ©VELO CREATIVE STUDIO</p>";
     $output .= "<div id=\"mobilefooter\">";
     $output .= "<div class=\"box left\">";
-    $output .= "<a href=\"https://www.instagram.com/slawek.tomas/?hl=en\">Instagram</a>";
+    $output .= "<a href=\"#\">Instagram</a>";
     $output .= "</div>";
     $output .= "<div class=\"box right\">";
-    $output .= "<a href=\"javascript:void(0)\" onclick=\"openContact()\">Contact Us</a>";
+    $output .= "<a href=\"#\">Contact Us</a>";
     $output .= "</div>";
     $output .= "</div></div>";
     $output .= "</body>";
