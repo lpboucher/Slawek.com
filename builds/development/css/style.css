@@ -759,6 +759,12 @@ body.modal-open {
     position: absolute;
     height: 100%;
     width: 100%; }
+    @media only screen and (min-device-width: 0px) and (max-device-width: 450px) and (orientation: portrait) {
+      #imgPanel .lightboxcontainer {
+        display: table; } }
+    @media only screen and (min-device-width: 600px) and (max-device-width: 1200px) and (orientation: portrait) {
+      #imgPanel .lightboxcontainer {
+        display: table; } }
 
 #imgPanel .close {
   position: absolute;
@@ -792,6 +798,16 @@ body.modal-open {
     #lightbox {
       height: auto;
       width: 100%; } }
+
+@media only screen and (min-device-width: 0px) and (max-device-width: 450px) and (orientation: portrait) {
+  .imgwrap {
+    display: table-cell;
+    vertical-align: middle; } }
+
+@media only screen and (min-device-width: 600px) and (max-device-width: 1200px) and (orientation: portrait) {
+  .imgwrap {
+    display: table-cell;
+    vertical-align: middle; } }
 
 .gallerycontainer {
   column-count: 3;

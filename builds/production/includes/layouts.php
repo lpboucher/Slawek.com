@@ -35,7 +35,7 @@ function show_navigation($page) {
     $nav .= "<li><a href=\"gallery.php?gallerytype=hospitality\">Hospitality</a></li>";
     $nav .= "<li><a href=\"gallery.php?gallerytype=cocktails\">Cocktails</a></li>";
     $nav .= "</ul></li>";
-    $nav .= "<li><a href=\"#projects\">Projects</a></li>";
+    //$nav .= "<li><a href=\"#projects\">Projects</a></li>";
     $nav .= "<li><a href=\"javascript:void(0)\" onclick=\"openAbout()\">About</a></li>";
     $nav .= "<li><a href=\"javascript:void(0)\" onclick=\"openContact()\">Contact</a></li>";
     $nav .= "</ul></div>";
@@ -44,7 +44,7 @@ function show_navigation($page) {
     $nav .= "<div id=\"mobilemenu\">";
     $nav .= "<ul>";
     $nav .= "<li class=\"mobileonly\"><a class=\"mobileonly\" href=\"{$menu_top_link}\">{$menu_label}</a></li>";
-    $nav .= "<li class=\"mobileonly\"><a class=\"mobileonly\" href=\"#projects\">Projects</a></li>";
+    //$nav .= "<li class=\"mobileonly\"><a class=\"mobileonly\" href=\"#projects\">Projects</a></li>";
     $nav .= "<li class=\"mobileonly\"><a class=\"mobileonly\" href=\"javascript:void(0)\" onclick=\"openAbout()\">About</a></li>";
     $nav .= "<li class=\"mobileonly\"><a class=\"mobileonly\" href=\"javascript:void(0)\" onclick=\"openContact()\">Contact</a></li>";
     $nav .= "</ul></div></div>";
@@ -71,7 +71,7 @@ function show_overlay() {
     $output .= "Slawek Tomas</br>";
     $output .= "London, UK</br>";
     $output .= "+44(0)7821-122621</br>";
-    $output .= "slawek.tomas@gmail.com";
+    $output .= "contact@viewfinder.photo";
     $output .= "</p>";
     $output .= "</form>";
     $output .= "</div>";

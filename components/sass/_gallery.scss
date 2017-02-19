@@ -6,6 +6,12 @@
         position: absolute;
         height: 100%;
         width: 100%;
+        @include bp(phone-portrait){
+            display: table;
+        }
+        @include bp(tablet-portrait) {
+            display: table;
+        }
     }
     position: fixed;
     background: rgba(0,0,0, 0.9);
@@ -51,6 +57,17 @@
         height:auto;
         width: 100%;
         //margin: auto 0;
+    }
+}
+
+.imgwrap {
+    @include bp(phone-portrait) {
+        display: table-cell;
+        vertical-align: middle;
+    }
+    @include bp(tablet-portrait) {
+        display: table-cell;
+        vertical-align: middle;
     }
 }
 
